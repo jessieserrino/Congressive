@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PoliticianTableViewController.h
 //  Congressive
 //
 //  Created by Jessie Serrino on 5/1/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface PoliticianTableViewController : UITableViewController
 
 @end
-
