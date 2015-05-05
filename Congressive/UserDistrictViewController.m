@@ -7,6 +7,11 @@
 //
 
 #import "UserDistrictViewController.h"
+#import "PoliticianTableViewController.h"
+#import "SpinningWheelView.h"
+#import "PoliticianProvider.h"
+#import "PoliticianInteractor.h"
+
 @import MapKit;
 
 
@@ -17,6 +22,7 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (strong, nonatomic) CLGeocoder *geocoder;
 
+@property (strong, nonatomic) IBOutlet SpinningWheelView *loadingView;
 @end
 
 @implementation UserDistrictViewController
@@ -31,6 +37,11 @@
     self.searchBar.delegate = self;
     
     // Do any additional setup after loading the view.
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    self.loadingView.hidden = YES;
 }
 
 - (CLLocationManager *)locationManager
@@ -56,7 +67,32 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)doneButtonPressed:(UIBarButtonItem *)sender {
+    
+    
+    self.loadingView.hidden = NO;
+    
+    
     [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
+
+//    [[PoliticianProvider sharedProvider] loadPoliticiansFromLocation:self.map.centerCoordinate completion:^(NSDictionary *data) {
+//        if([[PoliticianInteractor sharedInteractor] politiciansWithData:data])
+//        {
+//            self.loadingView.hidden = YES;
+//            [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
+//        }
+//    } error:^(id data, NSError *error) {
+//        self.loadingView.hidden = YES;
+//        UIAlertController *uialert = [UIAlertController alertControllerWithTitle:@"Something went wrong." message:@"Sorry about that" preferredStyle:UIAlertControllerStyleAlert];
+//        [uialert addAction:[UIAlertAction
+//           actionWithTitle:@"Ok"
+//                     style:UIAlertActionStyleDefault
+//                   handler:^(UIAlertAction *action)
+//                     {
+//                     
+//                     }]];
+//        [self presentViewController:uialert animated:YES completion:nil];
+//    }];
+//    
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -72,14 +108,17 @@
                  }];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    
+    PoliticianTableViewController *politicianVC = [segue destinationViewController];
 }
-*/
+
 
 @end

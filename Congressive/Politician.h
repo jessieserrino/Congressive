@@ -1,13 +1,14 @@
 //
-//  UserManager.h
+//  Politician.h
 //  Congressive
 //
-//  Created by Jessie Serrino on 5/1/15.
+//  Created by Jessie Serrino on 5/3/15.
 //  Copyright (c) 2015 Jessie Serrino. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface UserManager : NSObject
+@interface Politician : NSObject
+
 
 @end

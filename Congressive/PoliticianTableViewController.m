@@ -7,10 +7,11 @@
 //
 
 #import "PoliticianTableViewController.h"
+#import "PoliticianInteractor.h"
 #import "PoliticianTableViewCell.h"
 
 @interface PoliticianTableViewController ()
-
+@property (nonatomic, weak) NSArray *politicians;
 @end
 
 @implementation PoliticianTableViewController
@@ -21,12 +22,27 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+//    self.tableView.hidden = YES;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+
+- (NSArray *)politicians
+{
+    if(!_politicians)
+    {
+        _politicians = [PoliticianInteractor sharedInteractor].politicians;
+    }
+    return _politicians;
+}
+
+- (void) loadCells
+{
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -45,7 +61,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;//0;
+    return 1;//self.politicians.count;//0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -58,9 +74,7 @@
     PoliticianTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([PoliticianTableViewCell class]) forIndexPath:indexPath];
     
     cell.politicianNameLabel.text = @"Jessie Serrino";
-    
-    // Configure the cell...
-    
+        
     return cell;
 }
 
