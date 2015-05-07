@@ -10,7 +10,6 @@
 		88512CA8138814D7138D94F9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC98C7F2CBFF92D56E7F14B /* libPods.a */; };
 		910619021AF3CED3001476CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 910619011AF3CED3001476CA /* main.m */; };
 		910619051AF3CED3001476CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 910619041AF3CED3001476CA /* AppDelegate.m */; };
-		910619081AF3CED3001476CA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910619071AF3CED3001476CA /* DetailViewController.m */; };
 		9106190B1AF3CED4001476CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910619091AF3CED3001476CA /* Main.storyboard */; };
 		9106190D1AF3CED4001476CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9106190C1AF3CED4001476CA /* Images.xcassets */; };
 		910619101AF3CED4001476CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9106190E1AF3CED4001476CA /* LaunchScreen.xib */; };
@@ -21,6 +20,10 @@
 		9106562D1AF3FAA500D9BFC8 /* AFNRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9106562C1AF3FAA500D9BFC8 /* AFNRequestManager.m */; };
 		910656321AF3FF6500D9BFC8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910656311AF3FF6500D9BFC8 /* SettingsViewController.m */; };
 		911F76EA1AF3F22D00481CD3 /* UserDistrictViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 911F76E91AF3F22D00481CD3 /* UserDistrictViewController.m */; };
+		915A442F1AF96E1B00FFCC0E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915A442E1AF96E1B00FFCC0E /* DetailViewController.m */; };
+		9165182D1AF96C5E000979FA /* Disview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9165182C1AF96C5E000979FA /* Disview.xib */; };
+		918A7CCB1AFB022B0071BB98 /* ThumbnailRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 918A7CCA1AFB022B0071BB98 /* ThumbnailRequestManager.m */; };
+		918A7CD01AFB02610071BB98 /* ImageInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 918A7CCF1AFB02610071BB98 /* ImageInteractor.m */; };
 		91CEC8C21AF64ED3005C596B /* PoliticianProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8C11AF64ED3005C596B /* PoliticianProvider.m */; };
 		91CEC8CC1AF69850005C596B /* Politician.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8CB1AF69850005C596B /* Politician.m */; };
 		91CEC8D01AF6998B005C596B /* PoliticianInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8CF1AF6998B005C596B /* PoliticianInteractor.m */; };
@@ -45,8 +48,6 @@
 		910619011AF3CED3001476CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		910619031AF3CED3001476CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		910619041AF3CED3001476CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		910619061AF3CED3001476CA /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		910619071AF3CED3001476CA /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		9106190A1AF3CED3001476CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9106190C1AF3CED4001476CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9106190F1AF3CED4001476CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -65,6 +66,13 @@
 		910656311AF3FF6500D9BFC8 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		911F76E81AF3F22D00481CD3 /* UserDistrictViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDistrictViewController.h; sourceTree = "<group>"; };
 		911F76E91AF3F22D00481CD3 /* UserDistrictViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDistrictViewController.m; sourceTree = "<group>"; };
+		915A442D1AF96E1B00FFCC0E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		915A442E1AF96E1B00FFCC0E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		9165182C1AF96C5E000979FA /* Disview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Disview.xib; sourceTree = "<group>"; };
+		918A7CC91AFB022B0071BB98 /* ThumbnailRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbnailRequestManager.h; sourceTree = "<group>"; };
+		918A7CCA1AFB022B0071BB98 /* ThumbnailRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailRequestManager.m; sourceTree = "<group>"; };
+		918A7CCE1AFB02610071BB98 /* ImageInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageInteractor.h; sourceTree = "<group>"; };
+		918A7CCF1AFB02610071BB98 /* ImageInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageInteractor.m; sourceTree = "<group>"; };
 		91CEC8C01AF64ED3005C596B /* PoliticianProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliticianProvider.h; sourceTree = "<group>"; };
 		91CEC8C11AF64ED3005C596B /* PoliticianProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoliticianProvider.m; sourceTree = "<group>"; };
 		91CEC8CA1AF69850005C596B /* Politician.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Politician.h; sourceTree = "<group>"; };
@@ -147,6 +155,7 @@
 				9106190C1AF3CED4001476CA /* Images.xcassets */,
 				9106190E1AF3CED4001476CA /* LaunchScreen.xib */,
 				910618FF1AF3CED3001476CA /* Supporting Files */,
+				9165182C1AF96C5E000979FA /* Disview.xib */,
 			);
 			path = Congressive;
 			sourceTree = "<group>";
@@ -201,8 +210,8 @@
 		9106192A1AF3D7C2001476CA /* Politician Detail */ = {
 			isa = PBXGroup;
 			children = (
-				910619061AF3CED3001476CA /* DetailViewController.h */,
-				910619071AF3CED3001476CA /* DetailViewController.m */,
+				915A442D1AF96E1B00FFCC0E /* DetailViewController.h */,
+				915A442E1AF96E1B00FFCC0E /* DetailViewController.m */,
 			);
 			name = "Politician Detail";
 			sourceTree = "<group>";
@@ -237,6 +246,7 @@
 		9106562A1AF3FA0900D9BFC8 /* Fetching Data */ = {
 			isa = PBXGroup;
 			children = (
+				918A7CC51AFB014F0071BB98 /* Image Provider */,
 				91CEC8BF1AF64DA2005C596B /* Politician Provider */,
 				9106562E1AF3FBAF00D9BFC8 /* Core Request */,
 			);
@@ -271,6 +281,33 @@
 			name = "Get District";
 			sourceTree = "<group>";
 		};
+		918A7CC51AFB014F0071BB98 /* Image Provider */ = {
+			isa = PBXGroup;
+			children = (
+				918A7CC91AFB022B0071BB98 /* ThumbnailRequestManager.h */,
+				918A7CCA1AFB022B0071BB98 /* ThumbnailRequestManager.m */,
+			);
+			name = "Image Provider";
+			sourceTree = "<group>";
+		};
+		918A7CCC1AFB02390071BB98 /* Politician */ = {
+			isa = PBXGroup;
+			children = (
+				91CEC8CE1AF6998B005C596B /* PoliticianInteractor.h */,
+				91CEC8CF1AF6998B005C596B /* PoliticianInteractor.m */,
+			);
+			name = Politician;
+			sourceTree = "<group>";
+		};
+		918A7CCD1AFB02460071BB98 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				918A7CCE1AFB02610071BB98 /* ImageInteractor.h */,
+				918A7CCF1AFB02610071BB98 /* ImageInteractor.m */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		91CEC8BF1AF64DA2005C596B /* Politician Provider */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,8 +320,8 @@
 		91CEC8CD1AF69969005C596B /* Processing */ = {
 			isa = PBXGroup;
 			children = (
-				91CEC8CE1AF6998B005C596B /* PoliticianInteractor.h */,
-				91CEC8CF1AF6998B005C596B /* PoliticianInteractor.m */,
+				918A7CCD1AFB02460071BB98 /* Images */,
+				918A7CCC1AFB02390071BB98 /* Politician */,
 			);
 			name = Processing;
 			sourceTree = "<group>";
@@ -388,6 +425,7 @@
 				9106190B1AF3CED4001476CA /* Main.storyboard in Resources */,
 				910619101AF3CED4001476CA /* LaunchScreen.xib in Resources */,
 				9106190D1AF3CED4001476CA /* Images.xcassets in Resources */,
+				9165182D1AF96C5E000979FA /* Disview.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,9 +476,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918A7CCB1AFB022B0071BB98 /* ThumbnailRequestManager.m in Sources */,
 				91CEC8D31AF6A0AC005C596B /* SpinningWheelView.m in Sources */,
+				918A7CD01AFB02610071BB98 /* ImageInteractor.m in Sources */,
 				9106562D1AF3FAA500D9BFC8 /* AFNRequestManager.m in Sources */,
-				910619081AF3CED3001476CA /* DetailViewController.m in Sources */,
 				910656321AF3FF6500D9BFC8 /* SettingsViewController.m in Sources */,
 				91CEC8CC1AF69850005C596B /* Politician.m in Sources */,
 				91CEC8C21AF64ED3005C596B /* PoliticianProvider.m in Sources */,
@@ -450,6 +489,7 @@
 				910619051AF3CED3001476CA /* AppDelegate.m in Sources */,
 				910619021AF3CED3001476CA /* main.m in Sources */,
 				9106192E1AF3D7E2001476CA /* PoliticianTableViewCell.m in Sources */,
+				915A442F1AF96E1B00FFCC0E /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

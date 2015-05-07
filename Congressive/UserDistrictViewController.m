@@ -18,6 +18,7 @@
 @interface UserDistrictViewController () <MKMapViewDelegate, UISearchBarDelegate>
 @property (strong, nonatomic) IBOutlet MKMapView *map;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (strong, nonatomic) CLGeocoder *geocoder;
@@ -29,7 +30,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _locationManager = [[CLLocationManager alloc] init];
     [self.locationManager requestAlwaysAuthorization];
     [self.locationManager startUpdatingLocation];
     
@@ -62,6 +62,12 @@
     return _geocoder;
 }
 
+- (IBAction)unwindToMainMenu:(UIStoryboardSegue*)sender
+{
+    
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -72,27 +78,27 @@
     self.loadingView.hidden = NO;
     
     
-    [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
+//    [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
 
-//    [[PoliticianProvider sharedProvider] loadPoliticiansFromLocation:self.map.centerCoordinate completion:^(NSDictionary *data) {
-//        if([[PoliticianInteractor sharedInteractor] politiciansWithData:data])
-//        {
-//            self.loadingView.hidden = YES;
-//            [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
-//        }
-//    } error:^(id data, NSError *error) {
-//        self.loadingView.hidden = YES;
-//        UIAlertController *uialert = [UIAlertController alertControllerWithTitle:@"Something went wrong." message:@"Sorry about that" preferredStyle:UIAlertControllerStyleAlert];
-//        [uialert addAction:[UIAlertAction
-//           actionWithTitle:@"Ok"
-//                     style:UIAlertActionStyleDefault
-//                   handler:^(UIAlertAction *action)
-//                     {
-//                     
-//                     }]];
-//        [self presentViewController:uialert animated:YES completion:nil];
-//    }];
-//    
+    [[PoliticianProvider sharedProvider] loadPoliticiansFromLocation:self.map.centerCoordinate completion:^(NSDictionary *data) {
+        if([[PoliticianInteractor sharedInteractor] politiciansWithData:data])
+        {
+            self.loadingView.hidden = YES;
+            [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
+        }
+    } error:^(id data, NSError *error) {
+        self.loadingView.hidden = YES;
+        UIAlertController *uialert = [UIAlertController alertControllerWithTitle:@"Something went wrong." message:@"Sorry about that" preferredStyle:UIAlertControllerStyleAlert];
+        [uialert addAction:[UIAlertAction
+           actionWithTitle:@"Ok"
+                     style:UIAlertActionStyleDefault
+                   handler:^(UIAlertAction *action)
+                     {
+                     
+                     }]];
+        [self presentViewController:uialert animated:YES completion:nil];
+    }];
+    
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar

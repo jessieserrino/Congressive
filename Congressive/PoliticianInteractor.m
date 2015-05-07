@@ -8,6 +8,7 @@
 
 #import "PoliticianInteractor.h"
 #import "PoliticianProvider.h"
+#import "Politician.h"
 #import <Foundation/Foundation.h>
 
 @implementation PoliticianInteractor
@@ -22,20 +23,27 @@
     return sharedInteractor;
 }
 
-- (BOOL) hasPoliticians
-{
-    return (_politicians == nil);
-}
-
 - (BOOL) politiciansWithData: (NSDictionary *) data
 {
-    // Make politicians
-    if(data[@"count"] == 0)
-    {
+    NSInteger count = data[@"count"];
+    if(count == 0)
         return NO;
-    }
+    
+    _politicians = [self makePoliticiansWithCount:count andData:data];
     
     return YES;
+
+}
+
+- (NSArray *) makePoliticiansWithCount: (NSUInteger) count andData: (NSDictionary *) data
+{
+    NSMutableArray *politicians = [[NSMutableArray alloc] initWithCapacity:count];
+    NSArray *results = data[@"results"];
+    for(NSDictionary *senatorData in results)
+    {
+        [politicians addObject:[[Politician alloc] initWithDictionary:senatorData]];
+    }
+    return politicians;
 }
 
 @end

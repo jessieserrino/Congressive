@@ -15,7 +15,6 @@
 @property (nonatomic, strong) NSArray *politicians;
 
 + (instancetype) sharedInteractor;
-- (BOOL) hasPoliticians;
 - (BOOL) politiciansWithData: (NSDictionary *) data;
 
 

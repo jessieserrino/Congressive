@@ -9,6 +9,7 @@
 #import "PoliticianTableViewController.h"
 #import "PoliticianInteractor.h"
 #import "PoliticianTableViewCell.h"
+#import "Politician.h"
 
 @interface PoliticianTableViewController ()
 @property (nonatomic, weak) NSArray *politicians;
@@ -48,9 +49,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)settingsButtonClicked:(UIBarButtonItem *)sender {
+- (IBAction)mapButtonClicked:(UIBarButtonItem *)sender {
 
-    [self performSegueWithIdentifier:@"SegueToSettings" sender:self];
+    [self performSegueWithIdentifier:@"SegueUnwind" sender:self];
 }
 
 
@@ -61,19 +62,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;//self.politicians.count;//0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;//0;
+    return self.politicians.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PoliticianTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([PoliticianTableViewCell class]) forIndexPath:indexPath];
     
-    cell.politicianNameLabel.text = @"Jessie Serrino";
+    Politician *p = self.politicians[indexPath.item];
+    
+    cell.politicianNameLabel.text = p.fullName;
+    cell.politicianLocaleLabel.text = p.USState;
+    cell.politicianPartyLabel.text = p.politicalParty;
+    
         
     return cell;
 }
