@@ -6,8 +6,11 @@
 //  Copyright (c) 2015 Jessie Serrino. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface ThumbnailRequestManager : NSObject
-
-@end
+//#import <Foundation/Foundation.h>
+//#import <UIKit/UIKit.h>
+//
+//
+//@interface ThumbnailRequestManager : AFNRequestManager
+//+ (instancetype) sharedManager;
+//- (void)loadImageWithBioguide: (NSString *) bioguide completion:(SuccessBlock)successBlock error:(ErrorBlock)errorBlock;
+//@end

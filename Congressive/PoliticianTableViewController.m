@@ -79,8 +79,13 @@
     cell.politicianNameLabel.text = p.fullName;
     cell.politicianLocaleLabel.text = p.USState;
     cell.politicianPartyLabel.text = p.politicalParty;
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        cell.politicianImageView.image = p.politicianThumbnail;
+    });
     
-        
+    cell.politicianImageView.image = p.politicianThumbnail;
+//    [cell setCellImageWithPolitician:p];
+    
     return cell;
 }
 

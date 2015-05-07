@@ -79,12 +79,14 @@
     
     
 //    [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
+    
 
     [[PoliticianProvider sharedProvider] loadPoliticiansFromLocation:self.map.centerCoordinate completion:^(NSDictionary *data) {
         if([[PoliticianInteractor sharedInteractor] politiciansWithData:data])
         {
             self.loadingView.hidden = YES;
-            [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
+            if(data)
+                [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
         }
     } error:^(id data, NSError *error) {
         self.loadingView.hidden = YES;

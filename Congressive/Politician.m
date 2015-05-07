@@ -36,4 +36,16 @@
     return [NSString stringWithFormat:@"%@ %@", _firstName, _lastName ];
 }
 
+- (UIImage *)politicianThumbnail
+{
+    if(!_politicianThumbnail)
+    {
+        NSURL *req = [NSURL URLWithString:[NSString stringWithFormat:@"https://theunitedstates.io/images/congress/225x275/%@.jpg", self.bioguide]];
+        UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:req]];
+        _politicianThumbnail = image;
+    }
+    return _politicianThumbnail;
+}
+
+
 @end

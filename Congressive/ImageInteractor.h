@@ -10,14 +10,14 @@
 #import <UIKit/UIKit.h>
 #import "Politician.h"
 
-typedef void   (^CompletionBlock)(UIImage *);
+typedef void (^SuccessBlock)(id data);
 typedef void (^ErrorBlock)(id data,NSError *error);
 
 
-
-@interface ImageInteractor : NSObject
-
-+ (instancetype) sequencedImageInteractor;
-- (void) requestImageWithPolitician: (Politician *) politician andCompletion: (CompletionBlock) completion andError: (ErrorBlock) error;
-
-@end
+//
+//@interface ImageInteractor : NSObject
+//
+//+ (instancetype) sequencedImageInteractor;
+//- (void) requestImageWithPolitician: (Politician *) politician andCompletion: (SuccessBlock) completion andError: (ErrorBlock) error;
+//
+//@end

@@ -7,6 +7,7 @@
 //
 
 #import "PoliticianTableViewCell.h"
+#import "ImageInteractor.h"
 
 @interface PoliticianTableViewCell()
 
@@ -27,6 +28,7 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:website]];
 
 }
+
 
 - (void)awakeFromNib {
     // Initialization code

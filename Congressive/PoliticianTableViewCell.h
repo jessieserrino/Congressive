@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Politician.h"
 
 @interface PoliticianTableViewCell : UITableViewCell
 
@@ -15,6 +16,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *politicianLocaleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *politicianPartyLabel;
 @property (strong, nonatomic) IBOutlet UILabel *politicianRoleLabel;
+
+- (void) setCellImageWithPolitician: (Politician *) politician;
 
 
 @end
