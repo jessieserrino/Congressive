@@ -18,7 +18,15 @@
         _firstName = dictionary[@"first_name"];
         _lastName = dictionary[@"last_name"];
         _USState = dictionary[@"state_name"];
-        _politicalParty = dictionary[@"party"];
+        
+        NSString *politicalParty = dictionary[@"party"];
+        if([politicalParty isEqualToString:@"R"])
+            _politicalParty = @"Republican";
+        else if([politicalParty isEqualToString:@"D"])
+            _politicalParty = @"Democratic";
+        else
+            _politicalParty = @"Independent";
+
         _chamber = ([dictionary[@"chamber"] isEqualToString:@"senate"])? Senate : HouseOfRepresentatives;
         _website = [NSURL URLWithString:dictionary[@"website"]];
         _phoneNumber = dictionary[@"phone"];
@@ -42,7 +50,11 @@
     {
         NSURL *req = [NSURL URLWithString:[NSString stringWithFormat:@"https://theunitedstates.io/images/congress/225x275/%@.jpg", self.bioguide]];
         UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:req]];
-        _politicianThumbnail = image;
+        
+        if(image)
+            _politicianThumbnail = image;
+        else
+            _politicianThumbnail = [UIImage imageNamed:@"NoPicture"];
     }
     return _politicianThumbnail;
 }

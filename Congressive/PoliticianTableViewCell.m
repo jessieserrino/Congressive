@@ -19,14 +19,22 @@
 @implementation PoliticianTableViewCell
 
 - (IBAction)callButtonPressed:(UIButton *)sender {
-    NSString *phoneNumber = [NSString stringWithFormat: @"telprompt://%lli", 8473099966];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+
     
 }
-- (IBAction)websiteButtonPressed:(UIButton *)sender {
-    NSString *website = [NSString stringWithFormat: @"http://google.com"];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:website]];
+- (IBAction)phoneButtonPressed:(id)sender {
+//    NSString *phoneNumFiltered = [[self.politicianPhoneNumber componentsSeparatedByCharactersInSet:
+//                            [[NSCharacterSet decimalDigitCharacterSet] invertedSet]]
+//                           componentsJoinedByString:@""];
+    NSString *phoneNumber = [NSString stringWithFormat: @"telprompt://%@", self.politicianPhoneNumber];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+}
 
+- (IBAction)linkButtonPressed:(id)sender {
+    
+    if (![[UIApplication sharedApplication] openURL:self.politicianWebsite]) {
+        NSLog(@"%@%@",@"Failed to open url:",[self.politicianWebsite description]);
+    }
 }
 
 

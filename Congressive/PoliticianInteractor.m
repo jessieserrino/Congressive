@@ -25,14 +25,14 @@
 
 - (BOOL) politiciansWithData: (NSDictionary *) data
 {
-    NSInteger count = data[@"count"];
+    NSString *countString = (NSString *)  data[@"count"];
+    NSUInteger count = [countString integerValue];
     if(count == 0)
         return NO;
-    
-    _politicians = [self makePoliticiansWithCount:count andData:data];
-    
-    return YES;
-
+    else{
+        _politicians = [self makePoliticiansWithCount:count andData:data];
+        return YES;
+    }
 }
 
 - (NSArray *) makePoliticiansWithCount: (NSUInteger) count andData: (NSDictionary *) data

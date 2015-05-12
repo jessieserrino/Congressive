@@ -22,8 +22,10 @@
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (strong, nonatomic) CLGeocoder *geocoder;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinningWheel;
 
-@property (strong, nonatomic) IBOutlet SpinningWheelView *loadingView;
+@property (strong, nonatomic) IBOutlet UILabel *errorLabel;
+
 @end
 
 @implementation UserDistrictViewController
@@ -41,7 +43,7 @@
 
 - (void) viewWillAppear:(BOOL)animated
 {
-    self.loadingView.hidden = YES;
+    [super viewWillAppear:animated];
 }
 
 - (CLLocationManager *)locationManager
@@ -73,24 +75,28 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)doneButtonPressed:(UIBarButtonItem *)sender {
-    
-    
-    self.loadingView.hidden = NO;
-    
+    self.doneButton.enabled = NO;
+    [self.spinningWheel startAnimating];
     
 //    [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
     
 
     [[PoliticianProvider sharedProvider] loadPoliticiansFromLocation:self.map.centerCoordinate completion:^(NSDictionary *data) {
+        [self.spinningWheel stopAnimating];
         if([[PoliticianInteractor sharedInteractor] politiciansWithData:data])
         {
-            self.loadingView.hidden = YES;
-            if(data)
-                [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
+            [self setError:NO];
+            [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
         }
+        else
+        {
+            [self setError:YES];
+        }
+        self.doneButton.enabled = YES;
+        
     } error:^(id data, NSError *error) {
-        self.loadingView.hidden = YES;
-        UIAlertController *uialert = [UIAlertController alertControllerWithTitle:@"Something went wrong." message:@"Sorry about that" preferredStyle:UIAlertControllerStyleAlert];
+        [self.spinningWheel stopAnimating];
+        UIAlertController *uialert = [UIAlertController alertControllerWithTitle:@"No Internet Connection" message:@"Please Connect to Internet to Proceed" preferredStyle:UIAlertControllerStyleAlert];
         [uialert addAction:[UIAlertAction
            actionWithTitle:@"Ok"
                      style:UIAlertActionStyleDefault
@@ -99,12 +105,25 @@
                      
                      }]];
         [self presentViewController:uialert animated:YES completion:nil];
+        
+        self.doneButton.enabled = YES;
     }];
     
 }
 
+- (void) setError: (BOOL) active
+{
+    self.errorLabel.hidden = !active;
+}
+
+- (void) searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+}
+
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
+    [searchBar resignFirstResponder];
     NSString *address = searchBar.text;
     [self.geocoder geocodeAddressString:address
                  completionHandler:^(NSArray* placemarks, NSError* error){

@@ -49,13 +49,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)mapButtonClicked:(UIBarButtonItem *)sender {
 
-    [self performSegueWithIdentifier:@"SegueUnwind" sender:self];
-}
-
-
-#pragma mark - Table view delegate
 
 
 #pragma mark - Table view data source
@@ -79,12 +73,17 @@
     cell.politicianNameLabel.text = p.fullName;
     cell.politicianLocaleLabel.text = p.USState;
     cell.politicianPartyLabel.text = p.politicalParty;
-    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        cell.politicianImageView.image = p.politicianThumbnail;
-    });
+    
+    cell.politicianCongressLabel.text = (p.chamber == Senate)? @"Senate" : @"House of Representatives";
+    cell.politicianWebsite = p.website;
+    cell.politicianPhoneNumber = p.phoneNumber;
+//    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        cell.politicianImageView.image = p.politicianThumbnail;
+//    });
     
     cell.politicianImageView.image = p.politicianThumbnail;
 //    [cell setCellImageWithPolitician:p];
+    
     
     return cell;
 }
