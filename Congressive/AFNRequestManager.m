@@ -22,6 +22,8 @@
         [params addEntriesFromDictionary:parameters];
     }
     
+    [manager.requestSerializer setTimeoutInterval:10];
+    
     [manager GET:[self.baseDomain stringByAppendingPathComponent:endpoint] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         successBlock(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

@@ -7,8 +7,13 @@
 //
 
 #import "DetailViewController.h"
+#import "HeaderTableViewCell.h"
+#import "InformationTableViewCell.h"
+
 
 @interface DetailViewController ()
+@property (strong, nonatomic) IBOutlet HeaderTableViewCell *headerCell;
+@property (strong, nonatomic) IBOutlet InformationTableViewCell *informationCell;
 
 @end
 
@@ -22,6 +27,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setPolitician:(Politician *)politician
+{
+    _politician = politician;
+    [self.headerCell prepareWithPolitician:self.politician];
+    
 }
 
 @end

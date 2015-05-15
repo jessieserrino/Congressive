@@ -12,7 +12,7 @@
             <objects>
                 <tableViewController id="Ncc-Fs-k8a" customClass="PoliticianTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" id="gTQ-9D-oQa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.90323153410000001" green="0.90323153410000001" blue="0.90323153410000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -24,22 +24,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellBackground" translatesAutoresizingMaskIntoConstraints="NO" id="9Xh-b4-Khi">
-                                            <rect key="frame" x="3" y="8" width="408" height="139"/>
+                                            <rect key="frame" x="3" y="8" width="314" height="139"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rodney Frelinghuysen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Xbd-cs-Wwa">
-                                            <rect key="frame" x="117" y="28" width="197" height="27"/>
+                                            <rect key="frame" x="117" y="28" width="180" height="27"/>
                                             <fontDescription key="fontDescription" name="KohinoorDevanagari-Medium" family="Kohinoor Devanagari" pointSize="19"/>
                                             <color key="textColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="LHC-Ch-YVs">
-                                            <rect key="frame" x="378" y="64" width="18" height="33"/>
+                                            <rect key="frame" x="284" y="64" width="18" height="33"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="LHC-Ch-YVs" secondAttribute="height" multiplier="5:9" id="WEF-Um-v5f"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" misplaced="YES" text="Democrat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfQ-0e-2ap">
-                                            <rect key="frame" x="117" y="69" width="77" height="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Democratic Party" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfQ-0e-2ap">
+                                            <rect key="frame" x="117" y="72" width="98" height="17"/>
                                             <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="13"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -50,20 +50,20 @@
                                                 <constraint firstAttribute="width" secondItem="xyM-cq-NIn" secondAttribute="height" multiplier="225:275" id="0FJ-D3-SHt"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Virginia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="wiA-XG-A9z">
-                                            <rect key="frame" x="117" y="88" width="57" height="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Virginia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="wiA-XG-A9z">
+                                            <rect key="frame" x="117" y="89" width="41" height="17"/>
                                             <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="13"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIb-C7-yjX">
-                                            <rect key="frame" x="152" y="112" width="25" height="22"/>
+                                            <rect key="frame" x="148" y="112" width="16" height="22"/>
                                             <state key="normal" image="mail">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmY-Ik-tM1">
-                                            <rect key="frame" x="117" y="110" width="20" height="22"/>
+                                            <rect key="frame" x="117" y="110" width="16" height="22"/>
                                             <state key="normal" image="phone">
                                                 <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -72,7 +72,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7T-tL-egW">
-                                            <rect key="frame" x="192" y="109" width="23" height="24"/>
+                                            <rect key="frame" x="179" y="110" width="16" height="22"/>
                                             <state key="normal" image="link">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -80,10 +80,10 @@
                                                 <action selector="linkButtonPressed:" destination="iOV-RW-Cq2" eventType="touchUpInside" id="55M-Xe-U1n"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="House of Representatives" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ei2-1O-eWi">
-                                            <rect key="frame" x="117" y="50" width="261" height="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House of Representatives" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ei2-1O-eWi">
+                                            <rect key="frame" x="117" y="55" width="162" height="17"/>
                                             <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="13"/>
-                                            <color key="textColor" red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -158,7 +158,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <segue destination="g6B-yq-Wgl" kind="show" identifier="SegueToDetailView" id="sXQ-T1-0aG"/>
                     </connections>
@@ -167,22 +167,165 @@
             </objects>
             <point key="canvasLocation" x="2295" y="399"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="glm-PA-rib">
             <objects>
-                <tableViewController id="g6B-yq-Wgl" sceneMemberID="viewController">
+                <tableViewController id="g6B-yq-Wgl" customClass="DetailViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7XX-Ca-SpQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.90323153410000001" green="0.90323153410000001" blue="0.90323153410000001" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="e4n-Ka-Pyh">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="176" id="vKR-6x-WNB">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="180" id="vKR-6x-WNB" customClass="HeaderTableViewCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vKR-6x-WNB" id="hHu-hX-7e9">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="elK-ez-3jv">
+                                                    <rect key="frame" x="0.0" y="8" width="375" height="168"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoPicture" translatesAutoresizingMaskIntoConstraints="NO" id="wSN-XT-0yv">
+                                                    <rect key="frame" x="15" y="28" width="105" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="wSN-XT-0yv" secondAttribute="height" multiplier="225:275" id="QEh-Qk-Irz"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rodney Frelinghuysen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="5Ig-BX-ImC">
+                                                    <rect key="frame" x="127" y="38" width="230" height="35"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Medium" family="Kohinoor Devanagari" pointSize="25"/>
+                                                    <color key="textColor" red="0.2274509804" green="0.51372549020000002" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House of Representatives" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nMn-TH-gln">
+                                                    <rect key="frame" x="127" y="94" width="230" height="19"/>
+                                                    <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="14"/>
+                                                    <color key="textColor" red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Republican Party" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9i-YQ-Nkn">
+                                                    <rect key="frame" x="127" y="75" width="230" height="19"/>
+                                                    <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="14"/>
+                                                    <color key="textColor" red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aK-ZV-s6u">
+                                                    <rect key="frame" x="227" y="127" width="30" height="29"/>
+                                                    <state key="normal" image="twitter-with-circle">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="twitterButtonPushed:" destination="vKR-6x-WNB" eventType="touchUpInside" id="zlG-Oy-W35"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2M-ms-E2e">
+                                                    <rect key="frame" x="312" y="127" width="30" height="29"/>
+                                                    <state key="normal" image="youtube-with-circle">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="youtubeButtonPushed:" destination="vKR-6x-WNB" eventType="touchUpInside" id="Cmr-UV-7Eo"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xni-3E-ojK">
+                                                    <rect key="frame" x="140" y="127" width="30" height="29"/>
+                                                    <state key="normal" image="facebook-with-circle">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="facebookButtonPushed:" destination="vKR-6x-WNB" eventType="touchUpInside" id="yML-9M-Id6"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5Ig-BX-ImC" firstAttribute="width" secondItem="nMn-TH-gln" secondAttribute="width" id="4Qn-Rb-CV1"/>
+                                                <constraint firstItem="wSN-XT-0yv" firstAttribute="leading" secondItem="hHu-hX-7e9" secondAttribute="leadingMargin" constant="7" id="8qD-cT-X2c"/>
+                                                <constraint firstAttribute="centerY" secondItem="C9i-YQ-Nkn" secondAttribute="centerY" constant="5" id="EKV-dW-Tbz"/>
+                                                <constraint firstItem="5Ig-BX-ImC" firstAttribute="top" secondItem="hHu-hX-7e9" secondAttribute="topMargin" constant="30" id="HDJ-uQ-RVb"/>
+                                                <constraint firstItem="nMn-TH-gln" firstAttribute="centerX" secondItem="3aK-ZV-s6u" secondAttribute="centerX" id="KE5-CJ-LkY"/>
+                                                <constraint firstItem="elK-ez-3jv" firstAttribute="top" secondItem="hHu-hX-7e9" secondAttribute="topMargin" id="MuP-Tj-hod"/>
+                                                <constraint firstItem="wSN-XT-0yv" firstAttribute="top" secondItem="elK-ez-3jv" secondAttribute="top" constant="20" id="PVV-Np-dxa"/>
+                                                <constraint firstItem="Xni-3E-ojK" firstAttribute="leading" secondItem="wSN-XT-0yv" secondAttribute="trailing" constant="20" id="Pbh-iu-t3S"/>
+                                                <constraint firstAttribute="centerX" secondItem="elK-ez-3jv" secondAttribute="centerX" id="RbY-NY-abM"/>
+                                                <constraint firstItem="5Ig-BX-ImC" firstAttribute="centerX" secondItem="nMn-TH-gln" secondAttribute="centerX" id="SJk-bH-eOA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="elK-ez-3jv" secondAttribute="trailing" constant="-8" id="Thq-aM-aAS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="m2M-ms-E2e" secondAttribute="trailing" constant="25" id="V0e-eU-NTO"/>
+                                                <constraint firstItem="5Ig-BX-ImC" firstAttribute="leading" secondItem="wSN-XT-0yv" secondAttribute="trailing" constant="7" id="ZWz-Cx-1za"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Xni-3E-ojK" secondAttribute="bottom" constant="15" id="bsv-VZ-4tW"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="m2M-ms-E2e" secondAttribute="bottom" constant="15" id="dmp-TY-tiB"/>
+                                                <constraint firstItem="nMn-TH-gln" firstAttribute="top" secondItem="C9i-YQ-Nkn" secondAttribute="bottom" id="h8x-kV-3TY"/>
+                                                <constraint firstItem="C9i-YQ-Nkn" firstAttribute="centerX" secondItem="nMn-TH-gln" secondAttribute="centerX" id="hug-3b-VuH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5Ig-BX-ImC" secondAttribute="trailing" constant="10" id="ngf-qQ-JdM"/>
+                                                <constraint firstItem="elK-ez-3jv" firstAttribute="leading" secondItem="hHu-hX-7e9" secondAttribute="leadingMargin" constant="-8" id="qNR-Mv-eKN"/>
+                                                <constraint firstItem="wSN-XT-0yv" firstAttribute="bottom" secondItem="elK-ez-3jv" secondAttribute="bottom" constant="-20" id="qd4-3w-hjt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="elK-ez-3jv" secondAttribute="bottom" constant="-5" id="t5Z-4Z-Xg5"/>
+                                                <constraint firstItem="C9i-YQ-Nkn" firstAttribute="width" secondItem="nMn-TH-gln" secondAttribute="width" id="vFL-JX-Ua6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3aK-ZV-s6u" secondAttribute="bottom" constant="15" id="xmW-A4-NcG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="144" id="z58-oO-yzh" customClass="InformationTableViewCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z58-oO-yzh" id="ZH8-5I-bMo">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="Suy-oK-3ZR">
+                                                    <rect key="frame" x="0.0" y="3" width="375" height="137"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ly-yh-WJG">
+                                                    <rect key="frame" x="18" y="13" width="92" height="25"/>
+                                                    <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="19"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rlo-pE-82V">
+                                                    <rect key="frame" x="18" y="99" width="198" height="23"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="16"/>
+                                                    <state key="normal" title="    http://www.button.com" image="link">
+                                                        <color key="titleColor" red="0.30549636994949492" green="0.30549636994949492" blue="0.30549636994949492" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzq-DQ-01G">
+                                                    <rect key="frame" x="18" y="43" width="122" height="23"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="16"/>
+                                                    <state key="normal" title="    (847) 111-1111" image="phone">
+                                                        <color key="titleColor" red="0.30549636990000001" green="0.30549636990000001" blue="0.30549636990000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYb-0Z-eJw">
+                                                    <rect key="frame" x="18" y="71" width="159" height="23"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="16"/>
+                                                    <state key="normal" title="    stuff@stuff.email" image="mail">
+                                                        <color key="titleColor" red="0.30549636990000001" green="0.30549636990000001" blue="0.30549636990000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8Ly-yh-WJG" firstAttribute="top" secondItem="ZH8-5I-bMo" secondAttribute="topMargin" constant="5" id="2Ys-H6-otc"/>
+                                                <constraint firstItem="xzq-DQ-01G" firstAttribute="leading" secondItem="8Ly-yh-WJG" secondAttribute="leading" id="8Wx-jS-gS6"/>
+                                                <constraint firstItem="Suy-oK-3ZR" firstAttribute="leading" secondItem="ZH8-5I-bMo" secondAttribute="leadingMargin" constant="-8" id="9SM-V2-v9v"/>
+                                                <constraint firstItem="GYb-0Z-eJw" firstAttribute="top" secondItem="xzq-DQ-01G" secondAttribute="bottom" constant="5" id="AyG-Qy-5WH"/>
+                                                <constraint firstItem="Rlo-pE-82V" firstAttribute="top" secondItem="GYb-0Z-eJw" secondAttribute="bottom" constant="5" id="FJi-pD-R8c"/>
+                                                <constraint firstItem="8Ly-yh-WJG" firstAttribute="leading" secondItem="ZH8-5I-bMo" secondAttribute="leadingMargin" constant="10" id="Shn-YM-0eu"/>
+                                                <constraint firstItem="xzq-DQ-01G" firstAttribute="leading" secondItem="GYb-0Z-eJw" secondAttribute="leading" id="dxs-l0-e5G"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Suy-oK-3ZR" secondAttribute="bottom" constant="-5" id="gz9-eo-Phl"/>
+                                                <constraint firstItem="xzq-DQ-01G" firstAttribute="top" secondItem="8Ly-yh-WJG" secondAttribute="bottom" constant="5" id="iGk-aI-tF6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Suy-oK-3ZR" secondAttribute="trailing" constant="-8" id="j58-Mp-tmi"/>
+                                                <constraint firstItem="Suy-oK-3ZR" firstAttribute="top" secondItem="ZH8-5I-bMo" secondAttribute="topMargin" constant="-5" id="woY-Br-LHX"/>
+                                                <constraint firstItem="Rlo-pE-82V" firstAttribute="leading" secondItem="GYb-0Z-eJw" secondAttribute="leading" id="yn0-c8-D4M"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="emailButton" destination="GYb-0Z-eJw" id="ic5-Ju-9zs"/>
+                                            <outlet property="linkButton" destination="Rlo-pE-82V" id="c6n-aR-ucV"/>
+                                            <outlet property="phoneButton" destination="xzq-DQ-01G" id="gGu-vI-aRO"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -192,10 +335,15 @@
                             <outlet property="delegate" destination="g6B-yq-Wgl" id="Dtp-Qy-ATN"/>
                         </connections>
                     </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="headerCell" destination="vKR-6x-WNB" id="m1a-at-KhJ"/>
+                        <outlet property="informationCell" destination="z58-oO-yzh" id="mYg-oJ-6Xb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAK-iC-C18" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2877" y="291"/>
+            <point key="canvasLocation" x="2876.5" y="290.5"/>
         </scene>
         <!--Where Do You Live?-->
         <scene sceneID="fR2-46-OpS">
@@ -206,24 +354,24 @@
                         <viewControllerLayoutGuide type="bottom" id="Bwn-dB-gEz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Tj-XP-IF8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Home Address" translatesAutoresizingMaskIntoConstraints="NO" id="xdx-fz-nbY">
-                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpw-tj-cdS">
-                                <rect key="frame" x="16" y="160" width="382" height="409"/>
+                                <rect key="frame" x="16" y="160" width="288" height="308"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MapBackground" translatesAutoresizingMaskIntoConstraints="NO" id="xfd-KU-9ob">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="409"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="308"/>
                                     </imageView>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xRo-0I-ZiG">
-                                        <rect key="frame" x="2" y="2" width="378" height="407"/>
+                                        <rect key="frame" x="2" y="2" width="284" height="306"/>
                                     </mapView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="dPb-zl-5wN">
-                                        <rect key="frame" x="183" y="173" width="17" height="33"/>
+                                        <rect key="frame" x="136" y="122" width="17" height="33"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -242,19 +390,19 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find your address to discover what politicians represent you in Washington D.C.!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6P0-IA-QHn">
-                                <rect key="frame" x="15" y="118" width="384" height="34"/>
+                                <rect key="frame" x="15" y="118" width="290" height="34"/>
                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="12"/>
                                 <color key="textColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please locate an address within the United States and its territories." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8a-hf-e2P">
-                                <rect key="frame" x="18" y="589" width="378" height="45"/>
+                                <rect key="frame" x="18" y="488" width="284" height="45"/>
                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Medium" family="Kohinoor Devanagari" pointSize="16"/>
                                 <color key="textColor" red="0.83529411764705885" green="0.17647058823529413" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="o9B-ra-tpQ">
-                                <rect key="frame" x="197" y="350" width="20" height="37"/>
+                                <rect key="frame" x="153" y="222" width="14" height="37"/>
                                 <color key="color" red="0.2274509804" green="0.51372549020000002" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -284,7 +432,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="doneButton" destination="Ux6-5J-4E7" id="rZM-eM-6S2"/>
                         <outlet property="errorLabel" destination="x8a-hf-e2P" id="Ky7-pZ-Ld1"/>
@@ -336,12 +484,16 @@
     <resources>
         <image name="Arrow" width="18" height="31"/>
         <image name="CellBackground" width="355" height="140"/>
+        <image name="Header" width="355" height="158"/>
         <image name="Map" width="13" height="25"/>
         <image name="MapBackground" width="319" height="343"/>
         <image name="NoPicture" width="225" height="275"/>
         <image name="Pin" width="17" height="33"/>
-        <image name="link" width="23" height="24"/>
-        <image name="mail" width="25" height="17"/>
-        <image name="phone" width="20" height="20"/>
+        <image name="facebook-with-circle" width="30" height="29"/>
+        <image name="link" width="16" height="16"/>
+        <image name="mail" width="16" height="10"/>
+        <image name="phone" width="16" height="16"/>
+        <image name="twitter-with-circle" width="30" height="29"/>
+        <image name="youtube-with-circle" width="30" height="29"/>
     </resources>
 </document>

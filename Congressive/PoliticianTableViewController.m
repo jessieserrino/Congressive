@@ -10,9 +10,11 @@
 #import "PoliticianInteractor.h"
 #import "PoliticianTableViewCell.h"
 #import "Politician.h"
+#import "DetailViewController.h"
 
 @interface PoliticianTableViewController ()
-@property (nonatomic, weak) NSArray *politicians;
+    @property (nonatomic, weak) NSArray *politicians;
+@property (nonatomic, weak) Politician *selectedPolitician;
 @end
 
 @implementation PoliticianTableViewController
@@ -90,6 +92,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    self.selectedPolitician = self.politicians[indexPath.item];
     [self performSegueWithIdentifier:@"SegueToDetailView" sender:self];
 }
 
@@ -127,14 +130,18 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    DetailViewController *detail = [segue destinationViewController];
+    detail.politician = self.selectedPolitician;
+    
+    
 }
-*/
+
 
 @end

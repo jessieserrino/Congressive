@@ -96,7 +96,7 @@
         
     } error:^(id data, NSError *error) {
         [self.spinningWheel stopAnimating];
-        UIAlertController *uialert = [UIAlertController alertControllerWithTitle:@"No Internet Connection" message:@"Please Connect to Internet to Proceed" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *uialert = [UIAlertController alertControllerWithTitle:@"No Internet Connection" message:@"You appear to be offline. Please connect to Internet to proceed." preferredStyle:UIAlertControllerStyleAlert];
         [uialert addAction:[UIAlertAction
            actionWithTitle:@"Ok"
                      style:UIAlertActionStyleDefault

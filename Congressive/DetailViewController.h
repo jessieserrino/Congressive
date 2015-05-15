@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Politician.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UITableViewController
 
+@property (nonatomic, strong) Politician *politician;
 
 @end
 

@@ -24,6 +24,8 @@
 		9165182D1AF96C5E000979FA /* Disview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9165182C1AF96C5E000979FA /* Disview.xib */; };
 		918A7CCB1AFB022B0071BB98 /* ThumbnailRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 918A7CCA1AFB022B0071BB98 /* ThumbnailRequestManager.m */; };
 		918A7CD01AFB02610071BB98 /* ImageInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 918A7CCF1AFB02610071BB98 /* ImageInteractor.m */; };
+		91AF11541B05786F005A13CE /* HeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AF11531B05786F005A13CE /* HeaderTableViewCell.m */; };
+		91AF11571B057879005A13CE /* InformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AF11561B057879005A13CE /* InformationTableViewCell.m */; };
 		91CEC8C21AF64ED3005C596B /* PoliticianProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8C11AF64ED3005C596B /* PoliticianProvider.m */; };
 		91CEC8CC1AF69850005C596B /* Politician.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8CB1AF69850005C596B /* Politician.m */; };
 		91CEC8D01AF6998B005C596B /* PoliticianInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8CF1AF6998B005C596B /* PoliticianInteractor.m */; };
@@ -73,6 +75,10 @@
 		918A7CCA1AFB022B0071BB98 /* ThumbnailRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailRequestManager.m; sourceTree = "<group>"; };
 		918A7CCE1AFB02610071BB98 /* ImageInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageInteractor.h; sourceTree = "<group>"; };
 		918A7CCF1AFB02610071BB98 /* ImageInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageInteractor.m; sourceTree = "<group>"; };
+		91AF11521B05786F005A13CE /* HeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderTableViewCell.h; sourceTree = "<group>"; };
+		91AF11531B05786F005A13CE /* HeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderTableViewCell.m; sourceTree = "<group>"; };
+		91AF11551B057879005A13CE /* InformationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationTableViewCell.h; sourceTree = "<group>"; };
+		91AF11561B057879005A13CE /* InformationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationTableViewCell.m; sourceTree = "<group>"; };
 		91CEC8C01AF64ED3005C596B /* PoliticianProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliticianProvider.h; sourceTree = "<group>"; };
 		91CEC8C11AF64ED3005C596B /* PoliticianProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoliticianProvider.m; sourceTree = "<group>"; };
 		91CEC8CA1AF69850005C596B /* Politician.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Politician.h; sourceTree = "<group>"; };
@@ -210,6 +216,8 @@
 		9106192A1AF3D7C2001476CA /* Politician Detail */ = {
 			isa = PBXGroup;
 			children = (
+				91AF11511B057855005A13CE /* Header Cell */,
+				91AF11501B057814005A13CE /* Information Cell */,
 				915A442D1AF96E1B00FFCC0E /* DetailViewController.h */,
 				915A442E1AF96E1B00FFCC0E /* DetailViewController.m */,
 			);
@@ -306,6 +314,24 @@
 				918A7CCF1AFB02610071BB98 /* ImageInteractor.m */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		91AF11501B057814005A13CE /* Information Cell */ = {
+			isa = PBXGroup;
+			children = (
+				91AF11551B057879005A13CE /* InformationTableViewCell.h */,
+				91AF11561B057879005A13CE /* InformationTableViewCell.m */,
+			);
+			name = "Information Cell";
+			sourceTree = "<group>";
+		};
+		91AF11511B057855005A13CE /* Header Cell */ = {
+			isa = PBXGroup;
+			children = (
+				91AF11521B05786F005A13CE /* HeaderTableViewCell.h */,
+				91AF11531B05786F005A13CE /* HeaderTableViewCell.m */,
+			);
+			name = "Header Cell";
 			sourceTree = "<group>";
 		};
 		91CEC8BF1AF64DA2005C596B /* Politician Provider */ = {
@@ -480,6 +506,7 @@
 				91CEC8D31AF6A0AC005C596B /* SpinningWheelView.m in Sources */,
 				918A7CD01AFB02610071BB98 /* ImageInteractor.m in Sources */,
 				9106562D1AF3FAA500D9BFC8 /* AFNRequestManager.m in Sources */,
+				91AF11541B05786F005A13CE /* HeaderTableViewCell.m in Sources */,
 				910656321AF3FF6500D9BFC8 /* SettingsViewController.m in Sources */,
 				91CEC8CC1AF69850005C596B /* Politician.m in Sources */,
 				91CEC8C21AF64ED3005C596B /* PoliticianProvider.m in Sources */,
@@ -489,6 +516,7 @@
 				910619051AF3CED3001476CA /* AppDelegate.m in Sources */,
 				910619021AF3CED3001476CA /* main.m in Sources */,
 				9106192E1AF3D7E2001476CA /* PoliticianTableViewCell.m in Sources */,
+				91AF11571B057879005A13CE /* InformationTableViewCell.m in Sources */,
 				915A442F1AF96E1B00FFCC0E /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,9 +21,9 @@
         
         NSString *politicalParty = dictionary[@"party"];
         if([politicalParty isEqualToString:@"R"])
-            _politicalParty = @"Republican";
+            _politicalParty = @"Republican Party";
         else if([politicalParty isEqualToString:@"D"])
-            _politicalParty = @"Democratic";
+            _politicalParty = @"Democratic Party";
         else
             _politicalParty = @"Independent";
 

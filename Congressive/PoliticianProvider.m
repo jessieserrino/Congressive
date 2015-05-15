@@ -16,7 +16,7 @@
     self = [super init];
     if (self) {
         self.baseDomain = @"http://congress.api.sunlightfoundation.com";
-        self.defaultParams = [[NSDictionary alloc] initWithObjects:@[@"17f124e252574edf9b8fe5d4b52e0fd4"] forKeys:@[@"apikey"]];
+        self.defaultParams = [[NSDictionary alloc] initWithObjects:@[@"17f124e252574edf9b8fe5d4b52e0fd4", @"chamber"] forKeys:@[@"apikey", @"order"]];
     }
 
     return self;
