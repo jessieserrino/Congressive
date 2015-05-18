@@ -13,6 +13,7 @@
 
 @interface DetailViewController ()
 
+@property (strong, nonatomic) IBOutlet UIImageView *politicianThumbnail;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *partyLabel;
 @property (strong, nonatomic) IBOutlet UILabel *chamberLabel;
@@ -30,6 +31,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.nameLabel.text = self.politician.fullName;
+    self.partyLabel.text = self.politician.politicalParty;
+    self.chamberLabel.text = (self.politician.chamber == Senate)? @"Senate" : @"House of Representatives";
+    self.politicianThumbnail.image = self.politician.politicianThumbnail;
+
+//    self.telephoneButton.titleLabel.text = self.politician.phoneNumber;
+//    self.websiteButton.titleLabel.text = self.politician.website.description;
 }
 
 - (void)didReceiveMemoryWarning {

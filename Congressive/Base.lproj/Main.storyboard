@@ -345,6 +345,7 @@
                         <outlet property="emailButton" destination="GYb-0Z-eJw" id="lwZ-19-3HS"/>
                         <outlet property="nameLabel" destination="5Ig-BX-ImC" id="9mc-Y5-pZX"/>
                         <outlet property="partyLabel" destination="C9i-YQ-Nkn" id="z9Q-1C-8vh"/>
+                        <outlet property="politicianThumbnail" destination="wSN-XT-0yv" id="3cd-BO-TrN"/>
                         <outlet property="telephoneButton" destination="xzq-DQ-01G" id="6y8-lP-uPF"/>
                         <outlet property="websiteButton" destination="Rlo-pE-82V" id="O5z-V2-0LR"/>
                     </connections>

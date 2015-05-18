@@ -15,7 +15,7 @@
 @import MapKit;
 
 
-@interface UserDistrictViewController () <MKMapViewDelegate, UISearchBarDelegate>
+@interface UserDistrictViewController () <MKMapViewDelegate, UISearchBarDelegate, CLLocationManagerDelegate>
 @property (strong, nonatomic) IBOutlet MKMapView *map;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 
@@ -30,14 +30,15 @@
 
 @implementation UserDistrictViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.locationManager requestAlwaysAuthorization];
-    [self.locationManager startUpdatingLocation];
     
     self.map.delegate = self;
-    self.searchBar.delegate = self;
     
+    self.searchBar.delegate = self;
+    [self prepareLocationManager];
     // Do any additional setup after loading the view.
 }
 
@@ -46,13 +47,42 @@
     [super viewWillAppear:animated];
 }
 
-- (CLLocationManager *)locationManager
+- (void) viewDidAppear:(BOOL)animated
 {
-    if(!_locationManager)
-    {
-        _locationManager = [[CLLocationManager alloc] init];
+    [super viewDidAppear:animated];
+}
+
+- (void) prepareLocationManager
+{
+    _locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    
+    
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    } else {
+        // iOS 7 - We can't use requestWhenInUseAuthorization -- we'll get an unknown selector crash!
+        // Instead, you just start updating location, and the OS will take care of prompting the user
+        // for permissions.
+        [self.locationManager startUpdatingLocation];
     }
-    return _locationManager;
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    // We only need to start updating location for iOS 8 -- iOS 7 users should have already
+    // started getting location updates
+    if (status == kCLAuthorizationStatusAuthorizedAlways ||
+        status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        [manager startUpdatingLocation];
+        
+        MKCoordinateRegion region = self.map.region;
+        
+        region.span.latitudeDelta = region.span.latitudeDelta/4 ;
+        region.span.longitudeDelta = region.span.longitudeDelta/4;
+        
+        self.map.centerCoordinate = manager.location.coordinate;
+    }
 }
 
 - (CLGeocoder *)geocoder
@@ -77,8 +107,6 @@
 - (IBAction)doneButtonPressed:(UIBarButtonItem *)sender {
     self.doneButton.enabled = NO;
     [self.spinningWheel startAnimating];
-    
-//    [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
     
 
     [[PoliticianProvider sharedProvider] loadPoliticiansFromLocation:self.map.centerCoordinate completion:^(NSDictionary *data) {
@@ -127,10 +155,10 @@
     NSString *address = searchBar.text;
     [self.geocoder geocodeAddressString:address
                  completionHandler:^(NSArray* placemarks, NSError* error){
-                     for (CLPlacemark* aPlacemark in placemarks)
+                     if(placemarks.count > 0)
                      {
-                            [self.map setCenterCoordinate:aPlacemark.location.coordinate];
-                         // Process the placemark.
+                         CLPlacemark *placemark = placemarks[0];
+                         [self.map setCenterCoordinate:placemark.location.coordinate];
                      }
                  }];
 }
@@ -138,14 +166,13 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
-    
-    PoliticianTableViewController *politicianVC = [segue destinationViewController];
-}
+//// In a storyboard-based application, you will often want to do a little preparation before navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//    
+//
+//}
 
 
 @end

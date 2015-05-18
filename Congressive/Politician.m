@@ -35,6 +35,7 @@
         _youtubeAccount = dictionary[@"youtube_id"];
         _bioguide = dictionary[@"bioguide_id"];
         
+        
     }
     return self;
 }

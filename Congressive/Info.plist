@@ -32,6 +32,12 @@
 	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>By providing Congressive with your location, it can more quickly locate your representatives.</string>
+	<key>NSLocationUsageDescription</key>
+	<string></string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

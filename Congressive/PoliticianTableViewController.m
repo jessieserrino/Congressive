@@ -137,9 +137,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    DetailViewController *detail = [segue destinationViewController];
-    detail.politician = self.selectedPolitician;
     
+    if([segue.identifier isEqualToString:@"SegueToDetailView"])
+    {
+        DetailViewController *detail = [segue destinationViewController];
+        detail.politician = self.selectedPolitician;
+    }
     
 }
 
