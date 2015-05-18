@@ -34,14 +34,7 @@
 
 - (IBAction)facebookButtonPushed:(id)sender
 {
-    NSString *urlString = [NSString stringWithFormat:@"fb://profile/%lu", self.politician.facebookID];
-    NSURL *url = [NSURL URLWithString:urlString];
-    if ([[UIApplication sharedApplication] canOpenURL:url]){
-        [[UIApplication sharedApplication] openURL:url];
-    }
-    else {
-        //Open the url as usual
-    }
+
 }
 
 - (IBAction)twitterButtonPushed:(id)sender

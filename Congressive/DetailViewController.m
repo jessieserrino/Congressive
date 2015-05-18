@@ -12,8 +12,15 @@
 
 
 @interface DetailViewController ()
-@property (strong, nonatomic) IBOutlet HeaderTableViewCell *headerCell;
-@property (strong, nonatomic) IBOutlet InformationTableViewCell *informationCell;
+
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *partyLabel;
+@property (strong, nonatomic) IBOutlet UILabel *chamberLabel;
+
+@property (strong, nonatomic) IBOutlet UIButton *telephoneButton;
+@property (strong, nonatomic) IBOutlet UIButton *emailButton;
+@property (strong, nonatomic) IBOutlet UIButton *websiteButton;
+
 
 @end
 
@@ -22,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,10 +37,56 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) openClient: (NSString *) clientDescriptor withID: (NSUInteger) identifier andBackupURL: (NSString*) backupDescriptor
+{
+    NSString *urlString = [NSString stringWithFormat:clientDescriptor, identifier];
+    NSURL *url = [NSURL URLWithString:urlString];
+    if ([[UIApplication sharedApplication] canOpenURL:url]){
+        [[UIApplication sharedApplication] openURL:url];
+    }
+    else
+    {
+        urlString = [NSString stringWithFormat:backupDescriptor, identifier];
+        NSURL *url = [NSURL URLWithString:urlString];
+        [[UIApplication sharedApplication] openURL:url];
+    }
+}
+
+- (IBAction)facebookButtonPressed:(UIButton *)sender {
+    [self openClient:@"fb://profile/%lu" withID:self.politician.facebookID andBackupURL:@"http://facebook.com/profile.php?id=%lu"];
+    
+    //    NSString *urlString = [NSString stringWithFormat:@"fb://profile/%lu", self.politician.facebookID];
+//    NSURL *url = [NSURL URLWithString:urlString];
+//    if ([[UIApplication sharedApplication] canOpenURL:url]){
+//        [[UIApplication sharedApplication] openURL:url];
+//    }
+//    else {
+//        //Open the url as usual
+//        urlString = [NSString stringWithFormat:@"http://facebook.com/profile.php?id=%lu", self.politician.facebookID];
+//        NSURL *url = [NSURL URLWithString:urlString];
+//        [[UIApplication sharedApplication] openURL:url];
+//    }
+}
+- (IBAction)twitterButtonPressed:(UIButton *)sender {
+    [self openClient:@"twitter://user?id=%@" withID:self.politician.twitterHandle andBackupURL:@"http://twitter.com/%@"];
+}
+- (IBAction)youtubeButtonPressed:(UIButton *)sender {
+}
+
+- (IBAction)telephoneButtonPushed:(UIButton *)sender {
+}
+- (IBAction)emailButtonPushed:(UIButton *)sender {
+}
+
+- (IBAction)websiteButtonPushed:(UIButton *)sender {
+}
+
+
+
 - (void)setPolitician:(Politician *)politician
 {
     _politician = politician;
-    [self.headerCell prepareWithPolitician:self.politician];
+
     
 }
 

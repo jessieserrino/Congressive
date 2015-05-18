@@ -178,7 +178,7 @@
                         <sections>
                             <tableViewSection id="e4n-Ka-Pyh">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="180" id="vKR-6x-WNB" customClass="HeaderTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="180" id="vKR-6x-WNB">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vKR-6x-WNB" id="hHu-hX-7e9">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -216,7 +216,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="twitterButtonPushed:" destination="vKR-6x-WNB" eventType="touchUpInside" id="zlG-Oy-W35"/>
+                                                        <action selector="twitterButtonPressed:" destination="g6B-yq-Wgl" eventType="touchUpInside" id="nzO-fA-VSZ"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2M-ms-E2e">
@@ -225,7 +225,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="youtubeButtonPushed:" destination="vKR-6x-WNB" eventType="touchUpInside" id="Cmr-UV-7Eo"/>
+                                                        <action selector="youtubeButtonPressed:" destination="g6B-yq-Wgl" eventType="touchUpInside" id="Nqh-QI-oWx"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xni-3E-ojK">
@@ -234,7 +234,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="facebookButtonPushed:" destination="vKR-6x-WNB" eventType="touchUpInside" id="yML-9M-Id6"/>
+                                                        <action selector="facebookButtonPressed:" destination="g6B-yq-Wgl" eventType="touchUpInside" id="2Vz-gD-OOl"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -266,7 +266,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="144" id="z58-oO-yzh" customClass="InformationTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="144" id="z58-oO-yzh">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z58-oO-yzh" id="ZH8-5I-bMo">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -287,6 +287,9 @@
                                                         <color key="titleColor" red="0.30549636994949492" green="0.30549636994949492" blue="0.30549636994949492" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="websiteButtonPushed:" destination="g6B-yq-Wgl" eventType="touchUpInside" id="CUn-AT-jgG"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzq-DQ-01G">
                                                     <rect key="frame" x="18" y="43" width="122" height="23"/>
@@ -295,14 +298,20 @@
                                                         <color key="titleColor" red="0.30549636990000001" green="0.30549636990000001" blue="0.30549636990000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="telephoneButtonPushed:" destination="g6B-yq-Wgl" eventType="touchUpInside" id="hIe-TU-bGk"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYb-0Z-eJw">
-                                                    <rect key="frame" x="18" y="71" width="159" height="23"/>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYb-0Z-eJw">
+                                                    <rect key="frame" x="18" y="74" width="159" height="23"/>
                                                     <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="16"/>
                                                     <state key="normal" title="    stuff@stuff.email" image="mail">
                                                         <color key="titleColor" red="0.30549636990000001" green="0.30549636990000001" blue="0.30549636990000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="emailButtonPushed:" destination="g6B-yq-Wgl" eventType="touchUpInside" id="3L6-S8-Mt6"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -321,11 +330,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <outlet property="emailButton" destination="GYb-0Z-eJw" id="ic5-Ju-9zs"/>
-                                            <outlet property="linkButton" destination="Rlo-pE-82V" id="c6n-aR-ucV"/>
-                                            <outlet property="phoneButton" destination="xzq-DQ-01G" id="gGu-vI-aRO"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -337,8 +341,12 @@
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="headerCell" destination="vKR-6x-WNB" id="m1a-at-KhJ"/>
-                        <outlet property="informationCell" destination="z58-oO-yzh" id="mYg-oJ-6Xb"/>
+                        <outlet property="chamberLabel" destination="nMn-TH-gln" id="R6a-a8-SEg"/>
+                        <outlet property="emailButton" destination="GYb-0Z-eJw" id="lwZ-19-3HS"/>
+                        <outlet property="nameLabel" destination="5Ig-BX-ImC" id="9mc-Y5-pZX"/>
+                        <outlet property="partyLabel" destination="C9i-YQ-Nkn" id="z9Q-1C-8vh"/>
+                        <outlet property="telephoneButton" destination="xzq-DQ-01G" id="6y8-lP-uPF"/>
+                        <outlet property="websiteButton" destination="Rlo-pE-82V" id="O5z-V2-0LR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAK-iC-C18" userLabel="First Responder" sceneMemberID="firstResponder"/>
