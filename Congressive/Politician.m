@@ -30,14 +30,34 @@
         _chamber = ([dictionary[@"chamber"] isEqualToString:@"senate"])? Senate : HouseOfRepresentatives;
         _website = [NSURL URLWithString:dictionary[@"website"]];
         _phoneNumber = dictionary[@"phone"];
-        //_facebookID = dictionary[@"facebook_id"];
+        
+//        /* THIS SHOULD WORK  */
+//        NSNumber *num = dictionary[@"facebook_id"];
+//        _facebookID = [num integerValue];
+        _facebookID = dictionary[@"facebook_id"];
         _twitterHandle = dictionary[@"twitter_id"];
         _youtubeAccount = dictionary[@"youtube_id"];
         _bioguide = dictionary[@"bioguide_id"];
-        
+        _email = dictionary[@"oc_email"];
         
     }
     return self;
+}
+
++ (instancetype) fakePolitician
+{
+    Politician * p = [[Politician alloc] init];
+    p.firstName = @"Elizabeth";
+    p.lastName = @"Fairfield";
+    p.phoneNumber = @"847-309-9966";
+    p.email = @"RepFairfield@opencongress.org";
+    p.website = [NSURL URLWithString: @"http://www.elizabethfairfield.com"];
+    p.politicalParty = @"Democratic Party";
+    p.chamber = HouseOfRepresentatives;
+    
+    
+    
+    return p;
 }
 
 - (NSString *)fullName

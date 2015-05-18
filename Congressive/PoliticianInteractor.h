@@ -16,6 +16,6 @@
 
 + (instancetype) sharedInteractor;
 - (BOOL) politiciansWithData: (NSDictionary *) data;
-
+- (void) fakePoliticians;
 
 @end

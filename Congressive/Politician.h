@@ -28,10 +28,11 @@ typedef enum : NSUInteger {
 
 // Contact info
 @property (nonatomic, strong)         NSURL *website;
+@property (nonatomic, strong)         NSString *email;
 @property (nonatomic, strong)         NSString *phoneNumber;
 
 // Social media
-@property (nonatomic)                 NSUInteger  facebookID;
+@property (nonatomic)                 NSString *facebookID;
 @property (nonatomic, strong)         NSString *twitterHandle;
 @property (nonatomic, strong)         NSString *youtubeAccount;
 
@@ -41,6 +42,7 @@ typedef enum : NSUInteger {
 
 
 - (instancetype)initWithDictionary: (NSDictionary *) dictionary;
++ (instancetype) fakePolitician;
 
 
 @end

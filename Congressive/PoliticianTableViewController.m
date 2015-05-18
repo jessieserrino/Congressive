@@ -10,7 +10,7 @@
 #import "PoliticianInteractor.h"
 #import "PoliticianTableViewCell.h"
 #import "Politician.h"
-#import "DetailViewController.h"
+#import "TabBarViewController.h"
 
 @interface PoliticianTableViewController ()
     @property (nonatomic, weak) NSArray *politicians;
@@ -140,8 +140,8 @@
     
     if([segue.identifier isEqualToString:@"SegueToDetailView"])
     {
-        DetailViewController *detail = [segue destinationViewController];
-        detail.politician = self.selectedPolitician;
+        TabBarViewController *tab = [segue destinationViewController];
+        tab.politician = self.selectedPolitician;
     }
     
 }

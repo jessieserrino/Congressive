@@ -23,6 +23,17 @@
     return sharedInteractor;
 }
 
+/* Shit code delete */
+- (void) fakePoliticians
+{
+    NSMutableArray *fakePoliticians = [[NSMutableArray alloc] init];
+    for(int i = 0; i < 3 ; i++)
+    {
+        [fakePoliticians addObject: [Politician fakePolitician]];
+    }
+    _politicians = fakePoliticians;
+}
+
 - (BOOL) politiciansWithData: (NSDictionary *) data
 {
     NSString *countString = (NSString *)  data[@"count"];

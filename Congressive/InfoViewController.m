@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 Jessie Serrino. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "InfoViewController.h"
 #import "HeaderTableViewCell.h"
 #import "InformationTableViewCell.h"
 
 
-@interface DetailViewController ()
+@interface InfoViewController ()
 
 @property (strong, nonatomic) IBOutlet UIImageView *politicianThumbnail;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation DetailViewController
+@implementation InfoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,13 +36,33 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+
+    [self configureHeader];
+    [self configureContactInformation];
+}
+
+- (void) configureHeader
+{
     self.nameLabel.text = self.politician.fullName;
+    self.navigationController.navigationItem.title = self.politician.fullName;
     self.partyLabel.text = self.politician.politicalParty;
     self.chamberLabel.text = (self.politician.chamber == Senate)? @"Senate" : @"House of Representatives";
     self.politicianThumbnail.image = self.politician.politicianThumbnail;
+}
 
-//    self.telephoneButton.titleLabel.text = self.politician.phoneNumber;
-//    self.websiteButton.titleLabel.text = self.politician.website.description;
+- (void) configureContactInformation
+{
+    [self setButtonTitle:self.telephoneButton withTitle:self.politician.phoneNumber];
+    [self setButtonTitle:self.websiteButton withTitle:self.politician.website.description];
+    [self setButtonTitle:self.emailButton withTitle:self.politician.email];
+}
+
+- (void) setButtonTitle: (UIButton *) button withTitle: (NSString *) title
+{
+    CGFloat spacing = 10; // the amount of spacing to appear between image and title
+    button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, spacing);
+    button.titleEdgeInsets = UIEdgeInsetsMake(0, spacing, 0, 0);
+    [button setTitle:title forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -92,15 +112,6 @@
 }
 
 - (IBAction)websiteButtonPushed:(UIButton *)sender {
-}
-
-
-
-- (void)setPolitician:(Politician *)politician
-{
-    _politician = politician;
-
-    
 }
 
 @end

@@ -20,8 +20,10 @@
 		9106562D1AF3FAA500D9BFC8 /* AFNRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9106562C1AF3FAA500D9BFC8 /* AFNRequestManager.m */; };
 		910656321AF3FF6500D9BFC8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910656311AF3FF6500D9BFC8 /* SettingsViewController.m */; };
 		911F76EA1AF3F22D00481CD3 /* UserDistrictViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 911F76E91AF3F22D00481CD3 /* UserDistrictViewController.m */; };
-		915A442F1AF96E1B00FFCC0E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915A442E1AF96E1B00FFCC0E /* DetailViewController.m */; };
-		918A7CCB1AFB022B0071BB98 /* ThumbnailRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 918A7CCA1AFB022B0071BB98 /* ThumbnailRequestManager.m */; };
+		915A442F1AF96E1B00FFCC0E /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915A442E1AF96E1B00FFCC0E /* InfoViewController.m */; };
+		915C60901B0AA6DD0021C3A0 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915C608F1B0AA6DD0021C3A0 /* TabBarViewController.m */; };
+		915C60951B0AA9FB0021C3A0 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915C60941B0AA9FB0021C3A0 /* DetailTableViewController.m */; };
+		915C60981B0AAA420021C3A0 /* FinanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915C60971B0AAA420021C3A0 /* FinanceViewController.m */; };
 		918A7CD01AFB02610071BB98 /* ImageInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 918A7CCF1AFB02610071BB98 /* ImageInteractor.m */; };
 		91CEC8C21AF64ED3005C596B /* PoliticianProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8C11AF64ED3005C596B /* PoliticianProvider.m */; };
 		91CEC8CC1AF69850005C596B /* Politician.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8CB1AF69850005C596B /* Politician.m */; };
@@ -65,10 +67,14 @@
 		910656311AF3FF6500D9BFC8 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		911F76E81AF3F22D00481CD3 /* UserDistrictViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDistrictViewController.h; sourceTree = "<group>"; };
 		911F76E91AF3F22D00481CD3 /* UserDistrictViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDistrictViewController.m; sourceTree = "<group>"; };
-		915A442D1AF96E1B00FFCC0E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		915A442E1AF96E1B00FFCC0E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		918A7CC91AFB022B0071BB98 /* ThumbnailRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbnailRequestManager.h; sourceTree = "<group>"; };
-		918A7CCA1AFB022B0071BB98 /* ThumbnailRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailRequestManager.m; sourceTree = "<group>"; };
+		915A442D1AF96E1B00FFCC0E /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		915A442E1AF96E1B00FFCC0E /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		915C608E1B0AA6DD0021C3A0 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		915C608F1B0AA6DD0021C3A0 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		915C60931B0AA9FB0021C3A0 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
+		915C60941B0AA9FB0021C3A0 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
+		915C60961B0AAA420021C3A0 /* FinanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinanceViewController.h; sourceTree = "<group>"; };
+		915C60971B0AAA420021C3A0 /* FinanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinanceViewController.m; sourceTree = "<group>"; };
 		918A7CCE1AFB02610071BB98 /* ImageInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageInteractor.h; sourceTree = "<group>"; };
 		918A7CCF1AFB02610071BB98 /* ImageInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageInteractor.m; sourceTree = "<group>"; };
 		91CEC8C01AF64ED3005C596B /* PoliticianProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliticianProvider.h; sourceTree = "<group>"; };
@@ -186,9 +192,9 @@
 		910619251AF3D759001476CA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				915C608D1B0AA6C30021C3A0 /* Tab Controller */,
 				9106562F1AF3FF5600D9BFC8 /* Settings */,
 				911F76E71AF3F20E00481CD3 /* Get District */,
-				9106192A1AF3D7C2001476CA /* Politician Detail */,
 				910619291AF3D7BA001476CA /* Politician List */,
 			);
 			name = "View Controllers";
@@ -207,8 +213,8 @@
 		9106192A1AF3D7C2001476CA /* Politician Detail */ = {
 			isa = PBXGroup;
 			children = (
-				915A442D1AF96E1B00FFCC0E /* DetailViewController.h */,
-				915A442E1AF96E1B00FFCC0E /* DetailViewController.m */,
+				915A442D1AF96E1B00FFCC0E /* InfoViewController.h */,
+				915A442E1AF96E1B00FFCC0E /* InfoViewController.m */,
 			);
 			name = "Politician Detail";
 			sourceTree = "<group>";
@@ -243,7 +249,6 @@
 		9106562A1AF3FA0900D9BFC8 /* Fetching Data */ = {
 			isa = PBXGroup;
 			children = (
-				918A7CC51AFB014F0071BB98 /* Image Provider */,
 				91CEC8BF1AF64DA2005C596B /* Politician Provider */,
 				9106562E1AF3FBAF00D9BFC8 /* Core Request */,
 			);
@@ -278,13 +283,34 @@
 			name = "Get District";
 			sourceTree = "<group>";
 		};
-		918A7CC51AFB014F0071BB98 /* Image Provider */ = {
+		915C608D1B0AA6C30021C3A0 /* Tab Controller */ = {
 			isa = PBXGroup;
 			children = (
-				918A7CC91AFB022B0071BB98 /* ThumbnailRequestManager.h */,
-				918A7CCA1AFB022B0071BB98 /* ThumbnailRequestManager.m */,
+				915C608E1B0AA6DD0021C3A0 /* TabBarViewController.h */,
+				915C608F1B0AA6DD0021C3A0 /* TabBarViewController.m */,
+				915C60921B0AA9E90021C3A0 /* Base Controller */,
+				9106192A1AF3D7C2001476CA /* Politician Detail */,
+				915C60911B0AA8810021C3A0 /* Politician Finance */,
 			);
-			name = "Image Provider";
+			name = "Tab Controller";
+			sourceTree = "<group>";
+		};
+		915C60911B0AA8810021C3A0 /* Politician Finance */ = {
+			isa = PBXGroup;
+			children = (
+				915C60961B0AAA420021C3A0 /* FinanceViewController.h */,
+				915C60971B0AAA420021C3A0 /* FinanceViewController.m */,
+			);
+			name = "Politician Finance";
+			sourceTree = "<group>";
+		};
+		915C60921B0AA9E90021C3A0 /* Base Controller */ = {
+			isa = PBXGroup;
+			children = (
+				915C60931B0AA9FB0021C3A0 /* DetailTableViewController.h */,
+				915C60941B0AA9FB0021C3A0 /* DetailTableViewController.m */,
+			);
+			name = "Base Controller";
 			sourceTree = "<group>";
 		};
 		918A7CCC1AFB02390071BB98 /* Politician */ = {
@@ -472,10 +498,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				918A7CCB1AFB022B0071BB98 /* ThumbnailRequestManager.m in Sources */,
+				915C60951B0AA9FB0021C3A0 /* DetailTableViewController.m in Sources */,
 				91CEC8D31AF6A0AC005C596B /* SpinningWheelView.m in Sources */,
 				918A7CD01AFB02610071BB98 /* ImageInteractor.m in Sources */,
+				915C60901B0AA6DD0021C3A0 /* TabBarViewController.m in Sources */,
 				9106562D1AF3FAA500D9BFC8 /* AFNRequestManager.m in Sources */,
+				915C60981B0AAA420021C3A0 /* FinanceViewController.m in Sources */,
 				910656321AF3FF6500D9BFC8 /* SettingsViewController.m in Sources */,
 				91CEC8CC1AF69850005C596B /* Politician.m in Sources */,
 				91CEC8C21AF64ED3005C596B /* PoliticianProvider.m in Sources */,
@@ -485,7 +513,7 @@
 				910619051AF3CED3001476CA /* AppDelegate.m in Sources */,
 				910619021AF3CED3001476CA /* main.m in Sources */,
 				9106192E1AF3D7E2001476CA /* PoliticianTableViewCell.m in Sources */,
-				915A442F1AF96E1B00FFCC0E /* DetailViewController.m in Sources */,
+				915A442F1AF96E1B00FFCC0E /* InfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
