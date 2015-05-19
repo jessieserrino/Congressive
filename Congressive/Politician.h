@@ -41,6 +41,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong)         NSString *bioguide;
 @property (nonatomic, strong)         UIImage *politicianThumbnail;
 
+@property (nonatomic, strong)         NSString *office;
+
 
 - (instancetype)initWithDictionary: (NSDictionary *) dictionary;
 + (instancetype) fakePolitician;

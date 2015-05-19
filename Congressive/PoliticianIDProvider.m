@@ -14,8 +14,9 @@
 {
     self = [super init];
     if (self) {
+        NSString *apikey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Sunlight_APIKey"];
         self.baseDomain = @"http://transparencydata.com/api/1.0/entities/";
-        self.defaultParams = [[NSDictionary alloc] initWithObjects:@[@"17f124e252574edf9b8fe5d4b52e0fd4"] forKeys:@[@"apikey"]];
+        self.defaultParams = [[NSDictionary alloc] initWithObjects:@[apikey] forKeys:@[@"apikey"]];
     }
     
     return self;

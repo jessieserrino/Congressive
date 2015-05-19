@@ -39,7 +39,6 @@
     
     self.searchBar.delegate = self;
     [self prepareLocationManager];
-    // Do any additional setup after loading the view.
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -76,12 +75,11 @@
         status == kCLAuthorizationStatusAuthorizedWhenInUse) {
         [manager startUpdatingLocation];
         
-        MKCoordinateRegion region = self.map.region;
-        
-        region.span.latitudeDelta = region.span.latitudeDelta/4 ;
-        region.span.longitudeDelta = region.span.longitudeDelta/4;
-        
-        self.map.centerCoordinate = manager.location.coordinate;
+        [self setMapCenter: manager.location.coordinate];
+    }
+    else
+    {
+        [self setMapCenter:CLLocationCoordinate2DMake(38.8977, -77.0366)];
     }
 }
 
@@ -107,12 +105,6 @@
 - (IBAction)doneButtonPressed:(UIBarButtonItem *)sender {
     self.doneButton.enabled = NO;
     [self.spinningWheel startAnimating];
-    
-//    /* Get rid of this */
-//    [[PoliticianInteractor sharedInteractor] fakePoliticians];
-//    [self performSegueWithIdentifier:@"SegueToPoliticianList" sender:self];
-//    
-//    /* end */
 
     [[PoliticianProvider sharedProvider] loadPoliticiansFromLocation:self.map.centerCoordinate completion:^(NSDictionary *data) {
         [self.spinningWheel stopAnimating];
@@ -163,21 +155,22 @@
                      if(placemarks.count > 0)
                      {
                          CLPlacemark *placemark = placemarks[0];
-                         [self.map setCenterCoordinate:placemark.location.coordinate];
+                         [self setMapCenter:placemark.location.coordinate];
                      }
                  }];
 }
 
 
+- (void) setMapCenter: (CLLocationCoordinate2D) coordinate
+{
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(coordinate, 1000, 1000);
+    MKCoordinateRegion adjustedRegion = [self.map regionThatFits:viewRegion];
+    [self.map setRegion:adjustedRegion animated:YES];
+}
 
 #pragma mark - Navigation
 
-//// In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    // Get the new view controller using [segue destinationViewController].
-//    // Pass the selected object to the new view controller.
-//    
-//
+
 //}
 
 

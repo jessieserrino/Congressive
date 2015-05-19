@@ -15,8 +15,9 @@
 {
     self = [super init];
     if (self) {
+        NSString *apikey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Sunlight_APIKey"];
         self.baseDomain = @"http://congress.api.sunlightfoundation.com";
-        self.defaultParams = [[NSDictionary alloc] initWithObjects:@[@"17f124e252574edf9b8fe5d4b52e0fd4", @"chamber"] forKeys:@[@"apikey", @"order"]];
+        self.defaultParams = [[NSDictionary alloc] initWithObjects:@[apikey, @"chamber"] forKeys:@[@"apikey", @"order"]];
     }
 
     return self;

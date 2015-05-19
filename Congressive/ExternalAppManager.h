@@ -17,7 +17,8 @@ typedef enum : NSUInteger {
     WebBrowser,
     Facebook,
     Twitter,
-    YouTube
+    YouTube,
+    Maps
 } ExternalApplication;
 
 

@@ -10,8 +10,9 @@
 #import "Politician.h"
 #import "PoliticianDetail.h"
 
-@interface BillTableViewController : UITableViewController <PoliticianDetailProtocol>
+@interface BillTableViewController : UITableViewController <PoliticianDetailProtocol, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) Politician *politician;
+@property (nonatomic, strong) NSArray *bills;
 
 @end

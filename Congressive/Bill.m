@@ -15,7 +15,11 @@
     self = [super init];
     if(self)
     {
-    
+        _title =  (dictionary[@"nickname"])? dictionary[@"nickname"] : dictionary[@"popular_title"];
+        if(!_title)
+            _title = (dictionary[@"short_title"])? dictionary[@"short_title"] : dictionary[@"official_title"];
+        _govTrack = dictionary[@"govtrack"];
+        _number = dictionary[@"number"];
     }
     
     return self;

@@ -8,8 +8,9 @@
 
 #import "PoliticianDetail.h"
 
-@interface DonorViewController : UITableViewController <PoliticianDetailProtocol>
+@interface DonorViewController : UITableViewController <PoliticianDetailProtocol, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) Politician *politician;
+@property (nonatomic, strong) NSArray *donors;
 
 @end

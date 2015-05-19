@@ -38,6 +38,7 @@
     self.politicianCongressLabel.text = (politician.chamber == Senate)? @"Senate" : @"House of Representatives";
     
     self.politicianImageView.image = politician.politicianThumbnail;
+    _politician = politician;
 }
 
 

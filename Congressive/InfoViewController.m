@@ -10,6 +10,8 @@
 #import "HeaderTableViewCell.h"
 #import "InformationTableViewCell.h"
 #import "ExternalAppManager.h"
+#import <MapKit/MapKit.h>
+#import "MapPin.h"
 
 
 @interface InfoViewController ()
@@ -22,6 +24,10 @@
 @property (strong, nonatomic) IBOutlet UIButton *telephoneButton;
 @property (strong, nonatomic) IBOutlet UIButton *emailButton;
 @property (strong, nonatomic) IBOutlet UIButton *websiteButton;
+@property (strong, nonatomic) IBOutlet MKMapView *map;
+@property (strong, nonatomic) IBOutlet UIButton *addressButton;
+
+@property (strong, nonatomic) CLGeocoder *geocoder;
 
 
 @end
@@ -40,6 +46,7 @@
 
     [self configureHeader];
     [self configureContactInformation];
+    [self configureMap];
 }
 
 - (void) configureHeader
@@ -58,12 +65,44 @@
     [self setButtonTitle:self.emailButton withTitle:self.politician.email];
 }
 
+- (void) configureMap
+{
+    NSString *addressString = [NSString stringWithFormat:@"%@, D.C.", self.politician.office];
+    [self.addressButton setTitle:addressString forState:UIControlStateNormal];
+    [self.geocoder geocodeAddressString:addressString
+                      completionHandler:^(NSArray* placemarks, NSError* error){
+                          if(placemarks.count > 0)
+                          {
+                              CLPlacemark *placemark = placemarks[0];
+                              [self.map setCenterCoordinate:placemark.location.coordinate];
+                              MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(placemark.location.coordinate, 1000, 1000);
+                              MKCoordinateRegion adjustedRegion = [self.map regionThatFits:viewRegion];
+                              [self.map setRegion:adjustedRegion animated:YES];
+                              MapPin *pin = [[MapPin alloc] init];
+                              pin.title = [NSString stringWithFormat: @"%@'s Office", self.politician.fullName];
+                              pin.coordinate = placemark.location.coordinate;
+                              [self.map addAnnotation:pin];
+
+                          }
+                      }];
+}
+
 - (void) setButtonTitle: (UIButton *) button withTitle: (NSString *) title
 {
     CGFloat spacing = 10; // the amount of spacing to appear between image and title
     button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, spacing);
     button.titleEdgeInsets = UIEdgeInsetsMake(0, spacing, 0, 0);
     [button setTitle:title forState:UIControlStateNormal];
+}
+
+
+- (CLGeocoder *)geocoder
+{
+    if(!_geocoder)
+    {
+        _geocoder = [[CLGeocoder alloc] init];
+    }
+    return _geocoder;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,6 +129,15 @@
 
 - (IBAction)websiteButtonPushed:(UIButton *)sender {
     [ExternalAppManager open:WebBrowser WithPolitician:self.politician];
+}
+
+- (IBAction)addressButtonPushed:(id)sender {
+    [ExternalAppManager open:Maps WithPolitician:self.politician];
+}
+
+- (void) requestDataForViewController
+{
+    
 }
 
 @end

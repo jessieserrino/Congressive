@@ -22,6 +22,7 @@
     // Do any additional setup after loading the view.
     
     [self passPoliticianInformation];
+    [self loadExtraInformation];
 }
 
 - (void) passPoliticianInformation
@@ -31,11 +32,8 @@
 }
 - (void) loadExtraInformation
 {
-    [[DonorDataProvider sharedProvider] loadFinancialDataWithPolitician:self.politician successBlock:^(id data) {
-        
-    } errorBlock:^(id data, NSError *error) {
-        
-    }];
+    for(UIViewController<PoliticianDetailProtocol> *vc in self.viewControllers)
+        [vc requestDataForViewController];
 }
 
 - (void)didReceiveMemoryWarning {

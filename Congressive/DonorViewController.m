@@ -7,8 +7,12 @@
 //
 
 #import "DonorViewController.h"
+#import "DonorDataProvider.h"
+#import "DonorInteractor.h"
+#import "DonorTableViewCell.h"
 
 @interface DonorViewController ()
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinningWheel;
 
 @end
 
@@ -16,7 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.allowsSelection = NO;
+    self.spinningWheel.center = self.view.center;
+    self.tableView.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +32,46 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 1;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return self.donors.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DonorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DonorTableViewCell" forIndexPath:indexPath];
+    cell.donor = self.donors[indexPath.item];
+    cell.donorName.text = [NSString stringWithFormat:@"%i. %@", (indexPath.item + 1), cell.donorName.text];
+    return cell;
+}
+
+- (void) requestDataForViewController
+{
+    [self.spinningWheel startAnimating];
+    
+    [[DonorDataProvider sharedProvider] loadFinancialDataWithPolitician:self.politician successBlock:^(id data) {
+        [self.spinningWheel stopAnimating];
+        if([[DonorInteractor sharedInteractor] donorsWithData:data])
+        {
+            self.donors = [DonorInteractor sharedInteractor].donors;
+            [self.tableView reloadData];
+            [self.tableView layoutIfNeeded];
+        }
+
+    } errorBlock:^(id data, NSError *error) {
+        // Error out;
+    }];
+
+}
+
+
+
 
 @end

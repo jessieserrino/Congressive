@@ -13,5 +13,6 @@
 
 @property (nonatomic, strong) Politician *politician;
 
+- (void) requestDataForViewController;
 
 @end

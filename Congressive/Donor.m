@@ -14,10 +14,19 @@
     self = [super init];
     if(self)
     {
-        
+        _totalDonationAmount = [self formatDonation:dictionary[@"total_amount"]];
+        _name = dictionary[@"name"];
     }
     
     return self;
+}
+
+- (NSString *) formatDonation: (NSString *) donation
+{
+    NSNumberFormatter *formatter = [NSNumberFormatter new];
+    [formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    NSString *newDonationValue = [formatter stringFromNumber:[NSNumber numberWithDouble:[donation doubleValue] ]];
+    return newDonationValue;
 }
 
 

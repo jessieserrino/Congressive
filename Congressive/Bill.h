@@ -10,6 +10,10 @@
 
 @interface Bill : NSObject
 
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSURL *govTrack;
+@property (nonatomic)         NSString* number;
+
 - (instancetype)initWithDictionary: (NSDictionary *) dictionary;
 
 @end

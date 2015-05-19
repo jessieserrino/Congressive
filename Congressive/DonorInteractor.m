@@ -23,24 +23,17 @@
 
 - (BOOL) donorsWithData: (NSDictionary *) data
 {
-    NSString *countString = (NSString *)  data[@"count"];
-    NSUInteger count = [countString integerValue];
-    if(count == 0)
-        return NO;
-    else{
-        _donors = [self makeDonorsWithCount:count andData:data];
-        return YES;
-    }
+    _donors = [self makeDonorsWithData: data];
+    return (_donors.count > 0);
 }
 
-- (NSArray *) makeDonorsWithCount: (NSUInteger) count andData: (NSDictionary *) data
+- (NSArray *) makeDonorsWithData: (NSDictionary *) data
 {
-    NSMutableArray *donors = [[NSMutableArray alloc] initWithCapacity:count];
-    NSArray *results = data[@"results"];
-    for(NSDictionary *donorData in results)
-    {
+    NSMutableArray *donors = [[NSMutableArray alloc] initWithCapacity:data.count];
+    
+    for(NSDictionary *donorData in data)
         [donors addObject:[[Donor alloc] initWithDictionary:donorData]];
-    }
+
     return donors;
 }
 

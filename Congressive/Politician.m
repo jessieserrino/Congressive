@@ -36,6 +36,7 @@
         _youtubeAccount = dictionary[@"youtube_id"];
         _bioguide = dictionary[@"bioguide_id"];
         _email = dictionary[@"oc_email"];
+        _office = dictionary[@"office"];
         
     }
     return self;
@@ -97,6 +98,7 @@
     [encoder encodeObject:self.youtubeAccount forKey:@"youtubeAccount"];
     
     [encoder encodeObject:self.bioguide forKey:@"bioguide"];
+    [encoder encodeObject:self.office forKey:@"office"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder // NS_DESIGNATED_INITIALIZER
@@ -119,6 +121,8 @@
     _youtubeAccount = [decoder decodeObjectForKey:@"youtubeAccount"];
     
     _bioguide = [decoder decodeObjectForKey:@"bioguide"];
+    
+    _office = [decoder decodeObjectForKey:@"office"];
     
     
     return self;

@@ -18,6 +18,8 @@
             break;
             
         case Email:
+            
+            [self openClientURL:@"mailto:%@" withID:politician.email andBackupURL:nil];
             break;
             
         case WebBrowser:
@@ -36,16 +38,22 @@
             [self openClientURL:@"youtube://www.youtube.com/user/%@" withID:politician.youtubeAccount andBackupURL:@"https://www.youtube.com/user/%@"];
 
             break;
+        case Maps:
+            [self openClientURL:@"http://maps.apple.com/?q=%@" withID:politician.office andBackupURL:nil];
+            break;
     }
 }
 
 + (void) openClientURL: (NSString *) clientURL withID: (NSString *) identifier andBackupURL: (NSString*) backupDescriptor
 {
-    NSString *urlString = [NSString stringWithFormat:clientURL, identifier];
+    NSString *urlString = [NSString stringWithFormat:clientURL, [identifier stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+
+    
+    
     NSURL *url = [NSURL URLWithString:urlString];
     if ([[UIApplication sharedApplication] canOpenURL:url]){
         [[UIApplication sharedApplication] openURL:url];
-        NSLog(urlString);
+
     }
     else if(backupDescriptor)
     {
@@ -53,12 +61,6 @@
         NSURL *url = [NSURL URLWithString:urlString];
         [[UIApplication sharedApplication] openURL:url];
     }
-}
-
-+ (void) placeCallWithNumber: (NSString *) number
-{
-    NSString *phoneNumber = [NSString stringWithFormat: @"telprompt://%@", number];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
 }
 
 @end

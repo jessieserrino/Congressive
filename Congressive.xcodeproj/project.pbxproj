@@ -27,6 +27,8 @@
 		911EB0FC1B0B0E9A00A7FF57 /* Donor.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB0FB1B0B0E9A00A7FF57 /* Donor.m */; };
 		911EB1001B0B102500A7FF57 /* BillTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB0FF1B0B102500A7FF57 /* BillTableViewController.m */; };
 		911EB1041B0B134800A7FF57 /* DonorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB1031B0B134800A7FF57 /* DonorTableViewCell.m */; };
+		911EB1071B0B216B00A7FF57 /* BillTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB1061B0B216B00A7FF57 /* BillTableViewCell.m */; };
+		911EB10C1B0BAAA100A7FF57 /* MapPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB10B1B0BAAA100A7FF57 /* MapPin.m */; };
 		911F76EA1AF3F22D00481CD3 /* UserDistrictViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 911F76E91AF3F22D00481CD3 /* UserDistrictViewController.m */; };
 		915A442F1AF96E1B00FFCC0E /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915A442E1AF96E1B00FFCC0E /* InfoViewController.m */; };
 		915C60901B0AA6DD0021C3A0 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915C608F1B0AA6DD0021C3A0 /* TabBarViewController.m */; };
@@ -88,6 +90,10 @@
 		911EB0FF1B0B102500A7FF57 /* BillTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillTableViewController.m; sourceTree = "<group>"; };
 		911EB1021B0B134800A7FF57 /* DonorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonorTableViewCell.h; sourceTree = "<group>"; };
 		911EB1031B0B134800A7FF57 /* DonorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonorTableViewCell.m; sourceTree = "<group>"; };
+		911EB1051B0B216B00A7FF57 /* BillTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillTableViewCell.h; sourceTree = "<group>"; };
+		911EB1061B0B216B00A7FF57 /* BillTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillTableViewCell.m; sourceTree = "<group>"; };
+		911EB10A1B0BAAA100A7FF57 /* MapPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPin.h; sourceTree = "<group>"; };
+		911EB10B1B0BAAA100A7FF57 /* MapPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPin.m; sourceTree = "<group>"; };
 		911F76E81AF3F22D00481CD3 /* UserDistrictViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDistrictViewController.h; sourceTree = "<group>"; };
 		911F76E91AF3F22D00481CD3 /* UserDistrictViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDistrictViewController.m; sourceTree = "<group>"; };
 		915A442D1AF96E1B00FFCC0E /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
@@ -234,6 +240,7 @@
 		9106192A1AF3D7C2001476CA /* Politician Detail */ = {
 			isa = PBXGroup;
 			children = (
+				911EB1091B0BAA8A00A7FF57 /* MapPin */,
 				915A442D1AF96E1B00FFCC0E /* InfoViewController.h */,
 				915A442E1AF96E1B00FFCC0E /* InfoViewController.m */,
 			);
@@ -374,6 +381,7 @@
 		911EB0FD1B0B0FEE00A7FF57 /* Politician Bill */ = {
 			isa = PBXGroup;
 			children = (
+				911EB1081B0B217000A7FF57 /* Bill Cell */,
 				911EB0FE1B0B102500A7FF57 /* BillTableViewController.h */,
 				911EB0FF1B0B102500A7FF57 /* BillTableViewController.m */,
 			);
@@ -387,6 +395,24 @@
 				911EB1031B0B134800A7FF57 /* DonorTableViewCell.m */,
 			);
 			name = "Donor Cell";
+			sourceTree = "<group>";
+		};
+		911EB1081B0B217000A7FF57 /* Bill Cell */ = {
+			isa = PBXGroup;
+			children = (
+				911EB1051B0B216B00A7FF57 /* BillTableViewCell.h */,
+				911EB1061B0B216B00A7FF57 /* BillTableViewCell.m */,
+			);
+			name = "Bill Cell";
+			sourceTree = "<group>";
+		};
+		911EB1091B0BAA8A00A7FF57 /* MapPin */ = {
+			isa = PBXGroup;
+			children = (
+				911EB10A1B0BAAA100A7FF57 /* MapPin.h */,
+				911EB10B1B0BAAA100A7FF57 /* MapPin.m */,
+			);
+			name = MapPin;
 			sourceTree = "<group>";
 		};
 		911F76E71AF3F20E00481CD3 /* Get District */ = {
@@ -627,9 +653,11 @@
 				911EB0F81B0B0E8200A7FF57 /* Bill.m in Sources */,
 				911EB0FC1B0B0E9A00A7FF57 /* Donor.m in Sources */,
 				911EB1001B0B102500A7FF57 /* BillTableViewController.m in Sources */,
+				911EB1071B0B216B00A7FF57 /* BillTableViewCell.m in Sources */,
 				91CEC8C21AF64ED3005C596B /* PoliticianProvider.m in Sources */,
 				91CEC8D01AF6998B005C596B /* PoliticianInteractor.m in Sources */,
 				911EB0DB1B0AF5F200A7FF57 /* DonorDataProvider.m in Sources */,
+				911EB10C1B0BAAA100A7FF57 /* MapPin.m in Sources */,
 				911F76EA1AF3F22D00481CD3 /* UserDistrictViewController.m in Sources */,
 				910619281AF3D787001476CA /* PoliticianTableViewController.m in Sources */,
 				910619051AF3CED3001476CA /* AppDelegate.m in Sources */,
