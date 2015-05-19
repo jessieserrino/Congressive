@@ -7,7 +7,9 @@
 //
 
 #import "TabBarViewController.h"
-#import "DetailTableViewController.h"
+#import "PoliticianDetail.h"
+#import "DonorDataProvider.h"
+#import "BillProvider.h"
 
 @interface TabBarViewController ()
 
@@ -26,6 +28,14 @@
 {
     for(UIViewController<PoliticianDetailProtocol> *vc in self.viewControllers)
         vc.politician = self.politician;
+}
+- (void) loadExtraInformation
+{
+    [[DonorDataProvider sharedProvider] loadFinancialDataWithPolitician:self.politician successBlock:^(id data) {
+        
+    } errorBlock:^(id data, NSError *error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

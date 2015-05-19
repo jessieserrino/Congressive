@@ -31,9 +31,6 @@
         _website = [NSURL URLWithString:dictionary[@"website"]];
         _phoneNumber = dictionary[@"phone"];
         
-//        /* THIS SHOULD WORK  */
-//        NSNumber *num = dictionary[@"facebook_id"];
-//        _facebookID = [num integerValue];
         _facebookID = dictionary[@"facebook_id"];
         _twitterHandle = dictionary[@"twitter_id"];
         _youtubeAccount = dictionary[@"youtube_id"];
@@ -80,5 +77,51 @@
     return _politicianThumbnail;
 }
 
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+
+    [encoder encodeObject:self.firstName forKey:@"firstName"];
+    [encoder encodeObject:self.lastName forKey:@"lastName"];
+    [encoder encodeObject:self.fullName forKey:@"fullName"];
+    [encoder encodeObject:self.USState forKey:@"USState"];
+    
+    [encoder encodeObject:self.politicalParty forKey:@"politicalParty"];
+    [encoder encodeInteger:self.chamber forKey:@"chamber"];
+    
+    [encoder encodeObject:self.website forKey:@"website"];
+    [encoder encodeObject:self.email forKey:@"email"];
+    [encoder encodeObject:self.phoneNumber forKey:@"phoneNumber"];
+
+    [encoder encodeObject:self.facebookID forKey:@"facebookID"];
+    [encoder encodeObject:self.twitterHandle forKey:@"twitterHandle"];
+    [encoder encodeObject:self.youtubeAccount forKey:@"youtubeAccount"];
+    
+    [encoder encodeObject:self.bioguide forKey:@"bioguide"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder // NS_DESIGNATED_INITIALIZER
+{
+    self = [super init];
+    _firstName = [decoder decodeObjectForKey:@"firstName"];
+    _lastName = [decoder decodeObjectForKey:@"lastName"];
+    _fullName = [decoder decodeObjectForKey:@"fullName"];
+    _USState = [decoder decodeObjectForKey:@"USState"];
+    
+    _politicalParty = [decoder decodeObjectForKey:@"politicalParty"];
+    _chamber = [decoder decodeIntegerForKey:@"chamber"];
+    
+    _website = [decoder decodeObjectForKey:@"website"];
+    _email = [decoder decodeObjectForKey:@"email"];
+    _phoneNumber = [decoder decodeObjectForKey:@"phoneNumber"];
+    
+    _facebookID = [decoder decodeObjectForKey:@"facebookID"];
+    _twitterHandle  = [decoder decodeObjectForKey:@"twitterHandle"];
+    _youtubeAccount = [decoder decodeObjectForKey:@"youtubeAccount"];
+    
+    _bioguide = [decoder decodeObjectForKey:@"bioguide"];
+    
+    
+    return self;
+}
 
 @end

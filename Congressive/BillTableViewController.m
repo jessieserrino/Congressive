@@ -1,87 +1,57 @@
 //
-//  PoliticianTableViewController.m
+//  BillTableViewController.m
 //  Congressive
 //
-//  Created by Jessie Serrino on 5/1/15.
+//  Created by Jessie Serrino on 5/19/15.
 //  Copyright (c) 2015 Jessie Serrino. All rights reserved.
 //
 
-#import "PoliticianTableViewController.h"
-#import "PoliticianInteractor.h"
-#import "PoliticianTableViewCell.h"
-#import "Politician.h"
-#import "TabBarViewController.h"
+#import "BillTableViewController.h"
 
-@interface PoliticianTableViewController ()
-    @property (nonatomic, weak) NSArray *politicians;
-@property (nonatomic, weak) Politician *selectedPolitician;
+@interface BillTableViewController ()
+
 @end
 
-@implementation PoliticianTableViewController
+@implementation BillTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    
-//    self.tableView.hidden = YES;
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
-
-- (NSArray *)politicians
-{
-    if(!_politicians)
-    {
-        _politicians = [PoliticianInteractor sharedInteractor].politicians;
-    }
-    return _politicians;
-}
-
-- (void) loadCells
-{
-}
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return self.politicians.count;
+    return 0;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    PoliticianTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([PoliticianTableViewCell class]) forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    Politician *p = self.politicians[indexPath.item];
+    // Configure the cell...
     
-    cell.politician = p;
-
     return cell;
 }
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    self.selectedPolitician = self.politicians[indexPath.item];
-    [self performSegueWithIdentifier:@"SegueToDetailView" sender:self];
-}
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -117,21 +87,14 @@
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    
-    if([segue.identifier isEqualToString:@"SegueToDetailView"])
-    {
-        TabBarViewController *tab = [segue destinationViewController];
-        tab.politician = self.selectedPolitician;
-    }
-    
 }
-
+*/
 
 @end

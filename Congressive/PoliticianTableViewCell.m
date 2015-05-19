@@ -7,34 +7,37 @@
 //
 
 #import "PoliticianTableViewCell.h"
-#import "ImageInteractor.h"
+#import "ExternalAppManager.h"
+
 
 @interface PoliticianTableViewCell()
-
-
-
-
 @end
 
 @implementation PoliticianTableViewCell
 
-- (IBAction)callButtonPressed:(UIButton *)sender {
 
-    
-}
 - (IBAction)phoneButtonPressed:(id)sender {
-//    NSString *phoneNumFiltered = [[self.politicianPhoneNumber componentsSeparatedByCharactersInSet:
-//                            [[NSCharacterSet decimalDigitCharacterSet] invertedSet]]
-//                           componentsJoinedByString:@""];
-    NSString *phoneNumber = [NSString stringWithFormat: @"telprompt://%@", self.politicianPhoneNumber];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+    [ExternalAppManager open:Phone WithPolitician:self.politician];
+    
+}
+- (IBAction)emailButtonPressed:(UIButton *)sender {
+    [ExternalAppManager open:Email WithPolitician:self.politician];
 }
 
-- (IBAction)linkButtonPressed:(id)sender {
+- (IBAction)websiteButtonPressed:(id)sender {
     
-    if (![[UIApplication sharedApplication] openURL:self.politicianWebsite]) {
-        NSLog(@"%@%@",@"Failed to open url:",[self.politicianWebsite description]);
-    }
+    [ExternalAppManager open:WebBrowser WithPolitician:self.politician];
+}
+
+- (void)setPolitician:(Politician *)politician
+{
+    self.politicianNameLabel.text = politician.fullName;
+    self.politicianLocaleLabel.text = politician.USState;
+    self.politicianPartyLabel.text = politician.politicalParty;
+    
+    self.politicianCongressLabel.text = (politician.chamber == Senate)? @"Senate" : @"House of Representatives";
+    
+    self.politicianImageView.image = politician.politicianThumbnail;
 }
 
 

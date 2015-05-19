@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <Mantle/Mantle.h>
 
 
 typedef enum : NSUInteger {
@@ -15,7 +16,7 @@ typedef enum : NSUInteger {
     HouseOfRepresentatives,
 } CongressChamber;
 
-@interface Politician : NSObject
+@interface Politician : NSObject <NSCoding> //MTLModel <MTLJSONSerializing>
 
 // Basic
 @property (nonatomic, strong)         NSString *firstName;

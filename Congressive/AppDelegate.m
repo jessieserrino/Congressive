@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "UserDistrictViewController.h"
+#import "PoliticianTableViewController.h"
+#import "PoliticianInteractor.h"
 
 @interface AppDelegate ()
 
@@ -15,9 +18,25 @@
 @implementation AppDelegate
 
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window.tintColor = [UIColor whiteColor];
+
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if([userDefaults objectForKey:@"hasSavedPoliticians"])
+       [self restorePoliticians];
+    
     return YES;
+}
+
+- (void) restorePoliticians
+{
+    UINavigationController *nav = (UINavigationController *) self.window.rootViewController;
+    [nav pushViewController:[[PoliticianTableViewController alloc] init] animated:NO];
+    
+    [nav pushViewController: [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PoliticianTableViewController"] animated:NO];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

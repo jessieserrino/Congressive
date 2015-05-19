@@ -15,11 +15,12 @@
 @property (strong, nonatomic) IBOutlet UILabel *politicianNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *politicianLocaleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *politicianPartyLabel;
-@property (strong, nonatomic) NSURL *politicianWebsite;
-@property (strong, nonatomic) NSString *politicianPhoneNumber;
+
+@property (strong, nonatomic) Politician *politician;
+//@property (strong, nonatomic) NSURL *politicianWebsite;
+//@property (strong, nonatomic) NSString *politicianPhoneNumber;
 @property (strong, nonatomic) IBOutlet UILabel *politicianCongressLabel;
 
-- (void) setCellImageWithPolitician: (Politician *) politician;
 
 
 @end

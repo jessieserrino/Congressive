@@ -18,17 +18,24 @@
 		9106192E1AF3D7E2001476CA /* PoliticianTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9106192D1AF3D7E2001476CA /* PoliticianTableViewCell.m */; };
 		910656211AF3F6C500D9BFC8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910656201AF3F6C500D9BFC8 /* MapKit.framework */; };
 		9106562D1AF3FAA500D9BFC8 /* AFNRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9106562C1AF3FAA500D9BFC8 /* AFNRequestManager.m */; };
-		910656321AF3FF6500D9BFC8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910656311AF3FF6500D9BFC8 /* SettingsViewController.m */; };
+		911EB0DB1B0AF5F200A7FF57 /* DonorDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB0DA1B0AF5F200A7FF57 /* DonorDataProvider.m */; };
+		911EB0DF1B0AF7D700A7FF57 /* PoliticianIDProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB0DE1B0AF7D700A7FF57 /* PoliticianIDProvider.m */; };
+		911EB0E51B0B01A200A7FF57 /* BillProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB0E41B0B01A200A7FF57 /* BillProvider.m */; };
+		911EB0EC1B0B0CFE00A7FF57 /* DonorInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB0EB1B0B0CFE00A7FF57 /* DonorInteractor.m */; };
+		911EB0EF1B0B0D1500A7FF57 /* BillInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB0EE1B0B0D1500A7FF57 /* BillInteractor.m */; };
+		911EB0F81B0B0E8200A7FF57 /* Bill.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB0F71B0B0E8200A7FF57 /* Bill.m */; };
+		911EB0FC1B0B0E9A00A7FF57 /* Donor.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB0FB1B0B0E9A00A7FF57 /* Donor.m */; };
+		911EB1001B0B102500A7FF57 /* BillTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB0FF1B0B102500A7FF57 /* BillTableViewController.m */; };
+		911EB1041B0B134800A7FF57 /* DonorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB1031B0B134800A7FF57 /* DonorTableViewCell.m */; };
 		911F76EA1AF3F22D00481CD3 /* UserDistrictViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 911F76E91AF3F22D00481CD3 /* UserDistrictViewController.m */; };
 		915A442F1AF96E1B00FFCC0E /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915A442E1AF96E1B00FFCC0E /* InfoViewController.m */; };
 		915C60901B0AA6DD0021C3A0 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915C608F1B0AA6DD0021C3A0 /* TabBarViewController.m */; };
-		915C60951B0AA9FB0021C3A0 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915C60941B0AA9FB0021C3A0 /* DetailTableViewController.m */; };
-		915C60981B0AAA420021C3A0 /* FinanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915C60971B0AAA420021C3A0 /* FinanceViewController.m */; };
-		918A7CD01AFB02610071BB98 /* ImageInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 918A7CCF1AFB02610071BB98 /* ImageInteractor.m */; };
+		915C60981B0AAA420021C3A0 /* DonorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915C60971B0AAA420021C3A0 /* DonorViewController.m */; };
 		91CEC8C21AF64ED3005C596B /* PoliticianProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8C11AF64ED3005C596B /* PoliticianProvider.m */; };
 		91CEC8CC1AF69850005C596B /* Politician.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8CB1AF69850005C596B /* Politician.m */; };
 		91CEC8D01AF6998B005C596B /* PoliticianInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8CF1AF6998B005C596B /* PoliticianInteractor.m */; };
 		91CEC8D31AF6A0AC005C596B /* SpinningWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8D21AF6A0AC005C596B /* SpinningWheelView.m */; };
+		91E34C631B0AE96500628032 /* ExternalAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E34C621B0AE96500628032 /* ExternalAppManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,20 +70,33 @@
 		910656271AF3FA0100D9BFC8 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
 		9106562B1AF3FAA500D9BFC8 /* AFNRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNRequestManager.h; sourceTree = "<group>"; };
 		9106562C1AF3FAA500D9BFC8 /* AFNRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNRequestManager.m; sourceTree = "<group>"; };
-		910656301AF3FF6500D9BFC8 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		910656311AF3FF6500D9BFC8 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		911EB0D91B0AF5F200A7FF57 /* DonorDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonorDataProvider.h; sourceTree = "<group>"; };
+		911EB0DA1B0AF5F200A7FF57 /* DonorDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonorDataProvider.m; sourceTree = "<group>"; };
+		911EB0DD1B0AF7D700A7FF57 /* PoliticianIDProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliticianIDProvider.h; sourceTree = "<group>"; };
+		911EB0DE1B0AF7D700A7FF57 /* PoliticianIDProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoliticianIDProvider.m; sourceTree = "<group>"; };
+		911EB0E31B0B01A200A7FF57 /* BillProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillProvider.h; sourceTree = "<group>"; };
+		911EB0E41B0B01A200A7FF57 /* BillProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillProvider.m; sourceTree = "<group>"; };
+		911EB0EA1B0B0CFE00A7FF57 /* DonorInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonorInteractor.h; sourceTree = "<group>"; };
+		911EB0EB1B0B0CFE00A7FF57 /* DonorInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonorInteractor.m; sourceTree = "<group>"; };
+		911EB0ED1B0B0D1500A7FF57 /* BillInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillInteractor.h; sourceTree = "<group>"; };
+		911EB0EE1B0B0D1500A7FF57 /* BillInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillInteractor.m; sourceTree = "<group>"; };
+		911EB0F61B0B0E8200A7FF57 /* Bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bill.h; sourceTree = "<group>"; };
+		911EB0F71B0B0E8200A7FF57 /* Bill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bill.m; sourceTree = "<group>"; };
+		911EB0FA1B0B0E9A00A7FF57 /* Donor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Donor.h; sourceTree = "<group>"; };
+		911EB0FB1B0B0E9A00A7FF57 /* Donor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Donor.m; sourceTree = "<group>"; };
+		911EB0FE1B0B102500A7FF57 /* BillTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillTableViewController.h; sourceTree = "<group>"; };
+		911EB0FF1B0B102500A7FF57 /* BillTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillTableViewController.m; sourceTree = "<group>"; };
+		911EB1021B0B134800A7FF57 /* DonorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonorTableViewCell.h; sourceTree = "<group>"; };
+		911EB1031B0B134800A7FF57 /* DonorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonorTableViewCell.m; sourceTree = "<group>"; };
 		911F76E81AF3F22D00481CD3 /* UserDistrictViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDistrictViewController.h; sourceTree = "<group>"; };
 		911F76E91AF3F22D00481CD3 /* UserDistrictViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDistrictViewController.m; sourceTree = "<group>"; };
 		915A442D1AF96E1B00FFCC0E /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		915A442E1AF96E1B00FFCC0E /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		915C608E1B0AA6DD0021C3A0 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		915C608F1B0AA6DD0021C3A0 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
-		915C60931B0AA9FB0021C3A0 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
-		915C60941B0AA9FB0021C3A0 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
-		915C60961B0AAA420021C3A0 /* FinanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinanceViewController.h; sourceTree = "<group>"; };
-		915C60971B0AAA420021C3A0 /* FinanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinanceViewController.m; sourceTree = "<group>"; };
-		918A7CCE1AFB02610071BB98 /* ImageInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageInteractor.h; sourceTree = "<group>"; };
-		918A7CCF1AFB02610071BB98 /* ImageInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageInteractor.m; sourceTree = "<group>"; };
+		915C60961B0AAA420021C3A0 /* DonorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonorViewController.h; sourceTree = "<group>"; };
+		915C60971B0AAA420021C3A0 /* DonorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonorViewController.m; sourceTree = "<group>"; };
+		915C60991B0AB8A30021C3A0 /* PoliticianDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliticianDetail.h; sourceTree = "<group>"; };
 		91CEC8C01AF64ED3005C596B /* PoliticianProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliticianProvider.h; sourceTree = "<group>"; };
 		91CEC8C11AF64ED3005C596B /* PoliticianProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoliticianProvider.m; sourceTree = "<group>"; };
 		91CEC8CA1AF69850005C596B /* Politician.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Politician.h; sourceTree = "<group>"; };
@@ -85,6 +105,8 @@
 		91CEC8CF1AF6998B005C596B /* PoliticianInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoliticianInteractor.m; sourceTree = "<group>"; };
 		91CEC8D11AF6A0AC005C596B /* SpinningWheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpinningWheelView.h; sourceTree = "<group>"; };
 		91CEC8D21AF6A0AC005C596B /* SpinningWheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinningWheelView.m; sourceTree = "<group>"; };
+		91E34C611B0AE96500628032 /* ExternalAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExternalAppManager.h; sourceTree = "<group>"; };
+		91E34C621B0AE96500628032 /* ExternalAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExternalAppManager.m; sourceTree = "<group>"; };
 		DA45E7B8B237C8CA1F3EB2AB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				915C608D1B0AA6C30021C3A0 /* Tab Controller */,
-				9106562F1AF3FF5600D9BFC8 /* Settings */,
 				911F76E71AF3F20E00481CD3 /* Get District */,
 				910619291AF3D7BA001476CA /* Politician List */,
 			);
@@ -231,8 +252,9 @@
 		910656221AF3F96500D9BFC8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				91CEC8CA1AF69850005C596B /* Politician.h */,
-				91CEC8CB1AF69850005C596B /* Politician.m */,
+				911EB0F91B0B0E8D00A7FF57 /* Donor */,
+				911EB0F51B0B0E7700A7FF57 /* Bill */,
+				911EB0F41B0B0E6D00A7FF57 /* Politician */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -240,6 +262,7 @@
 		910656231AF3F97600D9BFC8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				91E34C601B0AE94B00628032 /* External */,
 				91CEC8CD1AF69969005C596B /* Processing */,
 				9106562A1AF3FA0900D9BFC8 /* Fetching Data */,
 			);
@@ -249,6 +272,8 @@
 		9106562A1AF3FA0900D9BFC8 /* Fetching Data */ = {
 			isa = PBXGroup;
 			children = (
+				911EB0E21B0B017C00A7FF57 /* Bill Data */,
+				911EB0DC1B0AF5F800A7FF57 /* Finance Data */,
 				91CEC8BF1AF64DA2005C596B /* Politician Provider */,
 				9106562E1AF3FBAF00D9BFC8 /* Core Request */,
 			);
@@ -265,13 +290,103 @@
 			name = "Core Request";
 			sourceTree = "<group>";
 		};
-		9106562F1AF3FF5600D9BFC8 /* Settings */ = {
+		911EB0DC1B0AF5F800A7FF57 /* Finance Data */ = {
 			isa = PBXGroup;
 			children = (
-				910656301AF3FF6500D9BFC8 /* SettingsViewController.h */,
-				910656311AF3FF6500D9BFC8 /* SettingsViewController.m */,
+				911EB0E01B0AF7DC00A7FF57 /* ID Provider */,
+				911EB0E11B0AF7E600A7FF57 /* Data Provider */,
 			);
-			name = Settings;
+			name = "Finance Data";
+			sourceTree = "<group>";
+		};
+		911EB0E01B0AF7DC00A7FF57 /* ID Provider */ = {
+			isa = PBXGroup;
+			children = (
+				911EB0DD1B0AF7D700A7FF57 /* PoliticianIDProvider.h */,
+				911EB0DE1B0AF7D700A7FF57 /* PoliticianIDProvider.m */,
+			);
+			name = "ID Provider";
+			sourceTree = "<group>";
+		};
+		911EB0E11B0AF7E600A7FF57 /* Data Provider */ = {
+			isa = PBXGroup;
+			children = (
+				911EB0D91B0AF5F200A7FF57 /* DonorDataProvider.h */,
+				911EB0DA1B0AF5F200A7FF57 /* DonorDataProvider.m */,
+			);
+			name = "Data Provider";
+			sourceTree = "<group>";
+		};
+		911EB0E21B0B017C00A7FF57 /* Bill Data */ = {
+			isa = PBXGroup;
+			children = (
+				911EB0E31B0B01A200A7FF57 /* BillProvider.h */,
+				911EB0E41B0B01A200A7FF57 /* BillProvider.m */,
+			);
+			name = "Bill Data";
+			sourceTree = "<group>";
+		};
+		911EB0E61B0B0CBB00A7FF57 /* Bill */ = {
+			isa = PBXGroup;
+			children = (
+				911EB0ED1B0B0D1500A7FF57 /* BillInteractor.h */,
+				911EB0EE1B0B0D1500A7FF57 /* BillInteractor.m */,
+			);
+			name = Bill;
+			sourceTree = "<group>";
+		};
+		911EB0E91B0B0CEE00A7FF57 /* Donor */ = {
+			isa = PBXGroup;
+			children = (
+				911EB0EA1B0B0CFE00A7FF57 /* DonorInteractor.h */,
+				911EB0EB1B0B0CFE00A7FF57 /* DonorInteractor.m */,
+			);
+			name = Donor;
+			sourceTree = "<group>";
+		};
+		911EB0F41B0B0E6D00A7FF57 /* Politician */ = {
+			isa = PBXGroup;
+			children = (
+				91CEC8CA1AF69850005C596B /* Politician.h */,
+				91CEC8CB1AF69850005C596B /* Politician.m */,
+			);
+			name = Politician;
+			sourceTree = "<group>";
+		};
+		911EB0F51B0B0E7700A7FF57 /* Bill */ = {
+			isa = PBXGroup;
+			children = (
+				911EB0F61B0B0E8200A7FF57 /* Bill.h */,
+				911EB0F71B0B0E8200A7FF57 /* Bill.m */,
+			);
+			name = Bill;
+			sourceTree = "<group>";
+		};
+		911EB0F91B0B0E8D00A7FF57 /* Donor */ = {
+			isa = PBXGroup;
+			children = (
+				911EB0FA1B0B0E9A00A7FF57 /* Donor.h */,
+				911EB0FB1B0B0E9A00A7FF57 /* Donor.m */,
+			);
+			name = Donor;
+			sourceTree = "<group>";
+		};
+		911EB0FD1B0B0FEE00A7FF57 /* Politician Bill */ = {
+			isa = PBXGroup;
+			children = (
+				911EB0FE1B0B102500A7FF57 /* BillTableViewController.h */,
+				911EB0FF1B0B102500A7FF57 /* BillTableViewController.m */,
+			);
+			name = "Politician Bill";
+			sourceTree = "<group>";
+		};
+		911EB1011B0B133400A7FF57 /* Donor Cell */ = {
+			isa = PBXGroup;
+			children = (
+				911EB1021B0B134800A7FF57 /* DonorTableViewCell.h */,
+				911EB1031B0B134800A7FF57 /* DonorTableViewCell.m */,
+			);
+			name = "Donor Cell";
 			sourceTree = "<group>";
 		};
 		911F76E71AF3F20E00481CD3 /* Get District */ = {
@@ -290,6 +405,7 @@
 				915C608F1B0AA6DD0021C3A0 /* TabBarViewController.m */,
 				915C60921B0AA9E90021C3A0 /* Base Controller */,
 				9106192A1AF3D7C2001476CA /* Politician Detail */,
+				911EB0FD1B0B0FEE00A7FF57 /* Politician Bill */,
 				915C60911B0AA8810021C3A0 /* Politician Finance */,
 			);
 			name = "Tab Controller";
@@ -298,8 +414,9 @@
 		915C60911B0AA8810021C3A0 /* Politician Finance */ = {
 			isa = PBXGroup;
 			children = (
-				915C60961B0AAA420021C3A0 /* FinanceViewController.h */,
-				915C60971B0AAA420021C3A0 /* FinanceViewController.m */,
+				911EB1011B0B133400A7FF57 /* Donor Cell */,
+				915C60961B0AAA420021C3A0 /* DonorViewController.h */,
+				915C60971B0AAA420021C3A0 /* DonorViewController.m */,
 			);
 			name = "Politician Finance";
 			sourceTree = "<group>";
@@ -307,8 +424,7 @@
 		915C60921B0AA9E90021C3A0 /* Base Controller */ = {
 			isa = PBXGroup;
 			children = (
-				915C60931B0AA9FB0021C3A0 /* DetailTableViewController.h */,
-				915C60941B0AA9FB0021C3A0 /* DetailTableViewController.m */,
+				915C60991B0AB8A30021C3A0 /* PoliticianDetail.h */,
 			);
 			name = "Base Controller";
 			sourceTree = "<group>";
@@ -320,15 +436,6 @@
 				91CEC8CF1AF6998B005C596B /* PoliticianInteractor.m */,
 			);
 			name = Politician;
-			sourceTree = "<group>";
-		};
-		918A7CCD1AFB02460071BB98 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				918A7CCE1AFB02610071BB98 /* ImageInteractor.h */,
-				918A7CCF1AFB02610071BB98 /* ImageInteractor.m */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 		91CEC8BF1AF64DA2005C596B /* Politician Provider */ = {
@@ -343,7 +450,8 @@
 		91CEC8CD1AF69969005C596B /* Processing */ = {
 			isa = PBXGroup;
 			children = (
-				918A7CCD1AFB02460071BB98 /* Images */,
+				911EB0E91B0B0CEE00A7FF57 /* Donor */,
+				911EB0E61B0B0CBB00A7FF57 /* Bill */,
 				918A7CCC1AFB02390071BB98 /* Politician */,
 			);
 			name = Processing;
@@ -356,6 +464,15 @@
 				91CEC8D21AF6A0AC005C596B /* SpinningWheelView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		91E34C601B0AE94B00628032 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				91E34C611B0AE96500628032 /* ExternalAppManager.h */,
+				91E34C621B0AE96500628032 /* ExternalAppManager.m */,
+			);
+			name = External;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,22 +615,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				915C60951B0AA9FB0021C3A0 /* DetailTableViewController.m in Sources */,
 				91CEC8D31AF6A0AC005C596B /* SpinningWheelView.m in Sources */,
-				918A7CD01AFB02610071BB98 /* ImageInteractor.m in Sources */,
+				911EB1041B0B134800A7FF57 /* DonorTableViewCell.m in Sources */,
 				915C60901B0AA6DD0021C3A0 /* TabBarViewController.m in Sources */,
 				9106562D1AF3FAA500D9BFC8 /* AFNRequestManager.m in Sources */,
-				915C60981B0AAA420021C3A0 /* FinanceViewController.m in Sources */,
-				910656321AF3FF6500D9BFC8 /* SettingsViewController.m in Sources */,
+				915C60981B0AAA420021C3A0 /* DonorViewController.m in Sources */,
+				91E34C631B0AE96500628032 /* ExternalAppManager.m in Sources */,
 				91CEC8CC1AF69850005C596B /* Politician.m in Sources */,
+				911EB0E51B0B01A200A7FF57 /* BillProvider.m in Sources */,
+				911EB0EC1B0B0CFE00A7FF57 /* DonorInteractor.m in Sources */,
+				911EB0F81B0B0E8200A7FF57 /* Bill.m in Sources */,
+				911EB0FC1B0B0E9A00A7FF57 /* Donor.m in Sources */,
+				911EB1001B0B102500A7FF57 /* BillTableViewController.m in Sources */,
 				91CEC8C21AF64ED3005C596B /* PoliticianProvider.m in Sources */,
 				91CEC8D01AF6998B005C596B /* PoliticianInteractor.m in Sources */,
+				911EB0DB1B0AF5F200A7FF57 /* DonorDataProvider.m in Sources */,
 				911F76EA1AF3F22D00481CD3 /* UserDistrictViewController.m in Sources */,
 				910619281AF3D787001476CA /* PoliticianTableViewController.m in Sources */,
 				910619051AF3CED3001476CA /* AppDelegate.m in Sources */,
 				910619021AF3CED3001476CA /* main.m in Sources */,
 				9106192E1AF3D7E2001476CA /* PoliticianTableViewCell.m in Sources */,
+				911EB0EF1B0B0D1500A7FF57 /* BillInteractor.m in Sources */,
 				915A442F1AF96E1B00FFCC0E /* InfoViewController.m in Sources */,
+				911EB0DF1B0AF7D700A7FF57 /* PoliticianIDProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

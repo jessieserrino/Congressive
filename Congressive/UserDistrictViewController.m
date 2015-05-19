@@ -105,42 +105,42 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)doneButtonPressed:(UIBarButtonItem *)sender {
-//    self.doneButton.enabled = NO;
-//    [self.spinningWheel startAnimating];
+    self.doneButton.enabled = NO;
+    [self.spinningWheel startAnimating];
     
-    /* Get rid of this */
-    [[PoliticianInteractor sharedInteractor] fakePoliticians];
-    [self performSegueWithIdentifier:@"SegueToPoliticianList" sender:self];
-    
-    /* end */
+//    /* Get rid of this */
+//    [[PoliticianInteractor sharedInteractor] fakePoliticians];
+//    [self performSegueWithIdentifier:@"SegueToPoliticianList" sender:self];
+//    
+//    /* end */
 
-//    [[PoliticianProvider sharedProvider] loadPoliticiansFromLocation:self.map.centerCoordinate completion:^(NSDictionary *data) {
-//        [self.spinningWheel stopAnimating];
-//        if([[PoliticianInteractor sharedInteractor] politiciansWithData:data])
-//        {
-//            [self setError:NO];
-//            [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
-//        }
-//        else
-//        {
-//            [self setError:YES];
-//        }
-//        self.doneButton.enabled = YES;
-//        
-//    } error:^(id data, NSError *error) {
-//        [self.spinningWheel stopAnimating];
-//        UIAlertController *uialert = [UIAlertController alertControllerWithTitle:@"No Internet Connection" message:@"You appear to be offline. Please connect to Internet to proceed." preferredStyle:UIAlertControllerStyleAlert];
-//        [uialert addAction:[UIAlertAction
-//           actionWithTitle:@"Ok"
-//                     style:UIAlertActionStyleDefault
-//                   handler:^(UIAlertAction *action)
-//                     {
-//                     
-//                     }]];
-//        [self presentViewController:uialert animated:YES completion:nil];
-//        
-//        self.doneButton.enabled = YES;
-//    }];
+    [[PoliticianProvider sharedProvider] loadPoliticiansFromLocation:self.map.centerCoordinate completion:^(NSDictionary *data) {
+        [self.spinningWheel stopAnimating];
+        if([[PoliticianInteractor sharedInteractor] politiciansWithData:data])
+        {
+            [self setError:NO];
+            [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
+        }
+        else
+        {
+            [self setError:YES];
+        }
+        self.doneButton.enabled = YES;
+        
+    } error:^(id data, NSError *error) {
+        [self.spinningWheel stopAnimating];
+        UIAlertController *uialert = [UIAlertController alertControllerWithTitle:@"No Internet Connection" message:@"You appear to be offline. Please connect to Internet to proceed." preferredStyle:UIAlertControllerStyleAlert];
+        [uialert addAction:[UIAlertAction
+           actionWithTitle:@"Ok"
+                     style:UIAlertActionStyleDefault
+                   handler:^(UIAlertAction *action)
+                     {
+                     
+                     }]];
+        [self presentViewController:uialert animated:YES completion:nil];
+        
+        self.doneButton.enabled = YES;
+    }];
     
 }
 

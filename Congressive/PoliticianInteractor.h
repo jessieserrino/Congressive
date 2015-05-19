@@ -16,6 +16,7 @@
 
 + (instancetype) sharedInteractor;
 - (BOOL) politiciansWithData: (NSDictionary *) data;
-- (void) fakePoliticians;
+- (void) loadPoliticiansFromFile;
+- (void) savePoliticiansToFile;
 
 @end

@@ -23,17 +23,6 @@
     return sharedInteractor;
 }
 
-/* Shit code delete */
-- (void) fakePoliticians
-{
-    NSMutableArray *fakePoliticians = [[NSMutableArray alloc] init];
-    for(int i = 0; i < 3 ; i++)
-    {
-        [fakePoliticians addObject: [Politician fakePolitician]];
-    }
-    _politicians = fakePoliticians;
-}
-
 - (BOOL) politiciansWithData: (NSDictionary *) data
 {
     NSString *countString = (NSString *)  data[@"count"];
@@ -42,6 +31,10 @@
         return NO;
     else{
         _politicians = [self makePoliticiansWithCount:count andData:data];
+        
+        [self savePoliticiansToFile];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasSavedPoliticians"];
+        
         return YES;
     }
 }
@@ -55,6 +48,37 @@
         [politicians addObject:[[Politician alloc] initWithDictionary:senatorData]];
     }
     return politicians;
+}
+
+- (void) loadPoliticiansFromFile
+{
+    NSArray *savedPoliticians = [NSKeyedUnarchiver unarchiveObjectWithFile:[self archivePath]];
+    NSMutableArray *arr = [[NSMutableArray alloc] initWithCapacity:savedPoliticians.count];
+    for(Politician * p in savedPoliticians)
+    {
+        [arr addObject:p];
+    }
+    self.politicians = arr;
+}
+
+- (void) savePoliticiansToFile
+{
+        [NSKeyedArchiver archiveRootObject:self.politicians toFile:[self archivePath]];
+}
+
+- (NSString *) archivePath
+{
+    NSString *politiciansPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    return [politiciansPath stringByAppendingPathComponent:@"politicians.dat"];
+}
+
+- (NSArray *) politicians
+{
+    if(!_politicians)
+    {
+        [self loadPoliticiansFromFile];
+    }
+    return _politicians;
 }
 
 @end

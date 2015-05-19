@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Jessie Serrino. All rights reserved.
 //
 
-#import "FinanceViewController.h"
+#import "DonorViewController.h"
 
-@interface FinanceViewController ()
+@interface DonorViewController ()
 
 @end
 
-@implementation FinanceViewController
+@implementation DonorViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

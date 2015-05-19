@@ -9,6 +9,7 @@
 #import "InfoViewController.h"
 #import "HeaderTableViewCell.h"
 #import "InformationTableViewCell.h"
+#import "ExternalAppManager.h"
 
 
 @interface InfoViewController ()
@@ -70,48 +71,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) openClient: (NSString *) clientDescriptor withID: (NSUInteger) identifier andBackupURL: (NSString*) backupDescriptor
-{
-    NSString *urlString = [NSString stringWithFormat:clientDescriptor, identifier];
-    NSURL *url = [NSURL URLWithString:urlString];
-    if ([[UIApplication sharedApplication] canOpenURL:url]){
-        [[UIApplication sharedApplication] openURL:url];
-    }
-    else
-    {
-        urlString = [NSString stringWithFormat:backupDescriptor, identifier];
-        NSURL *url = [NSURL URLWithString:urlString];
-        [[UIApplication sharedApplication] openURL:url];
-    }
-}
-
 - (IBAction)facebookButtonPressed:(UIButton *)sender {
-    [self openClient:@"fb://profile/%lu" withID:self.politician.facebookID andBackupURL:@"http://facebook.com/profile.php?id=%lu"];
-    
-    //    NSString *urlString = [NSString stringWithFormat:@"fb://profile/%lu", self.politician.facebookID];
-//    NSURL *url = [NSURL URLWithString:urlString];
-//    if ([[UIApplication sharedApplication] canOpenURL:url]){
-//        [[UIApplication sharedApplication] openURL:url];
-//    }
-//    else {
-//        //Open the url as usual
-//        urlString = [NSString stringWithFormat:@"http://facebook.com/profile.php?id=%lu", self.politician.facebookID];
-//        NSURL *url = [NSURL URLWithString:urlString];
-//        [[UIApplication sharedApplication] openURL:url];
-//    }
+    [ExternalAppManager open:Facebook WithPolitician:self.politician];
 }
 - (IBAction)twitterButtonPressed:(UIButton *)sender {
-    [self openClient:@"twitter://user?id=%@" withID:self.politician.twitterHandle andBackupURL:@"http://twitter.com/%@"];
+    [ExternalAppManager open:Twitter WithPolitician:self.politician];
 }
 - (IBAction)youtubeButtonPressed:(UIButton *)sender {
+    [ExternalAppManager open:YouTube WithPolitician:self.politician];
 }
 
 - (IBAction)telephoneButtonPushed:(UIButton *)sender {
+    [ExternalAppManager open:Phone WithPolitician:self.politician];
 }
 - (IBAction)emailButtonPushed:(UIButton *)sender {
+    [ExternalAppManager open:Email WithPolitician:self.politician];
 }
 
 - (IBAction)websiteButtonPushed:(UIButton *)sender {
+    [ExternalAppManager open:WebBrowser WithPolitician:self.politician];
 }
 
 @end

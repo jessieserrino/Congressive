@@ -10,11 +10,7 @@
 #import "Politician.h"
 
 
-@protocol PoliticianDetailProtocol <NSObject>
 
-@property (nonatomic, strong) Politician *politician;
-
-@end
 
 //@interface DetailTableViewController : UITableViewController
 //

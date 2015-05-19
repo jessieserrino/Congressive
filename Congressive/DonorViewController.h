@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Jessie Serrino. All rights reserved.
 //
 
-#import "DetailTableViewController.h"
+#import "PoliticianDetail.h"
 
-@interface FinanceViewController : UITableViewController <PoliticianDetailProtocol>
+@interface DonorViewController : UITableViewController <PoliticianDetailProtocol>
 
 @property (nonatomic, strong) Politician *politician;
 
