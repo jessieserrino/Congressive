@@ -1,0 +1,63 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "24t-Rc-hgS"; */
+"24t-Rc-hgS.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Rodney Frelinghuysen"; ObjectID = "5Ig-BX-ImC"; */
+"5Ig-BX-ImC.text" = "Rodney Frelinghuysen";
+
+/* Class = "UILabel"; text = "Find your address to discover what politicians represent you in Washington D.C.!"; ObjectID = "6P0-IA-QHn"; */
+"6P0-IA-QHn.text" = "Find your address to discover what politicians represent you in Washington D.C.!";
+
+/* Class = "UILabel"; text = "Information"; ObjectID = "8Ly-yh-WJG"; */
+"8Ly-yh-WJG.text" = "Information";
+
+/* Class = "UILabel"; text = "Republican Party"; ObjectID = "C9i-YQ-Nkn"; */
+"C9i-YQ-Nkn.text" = "Republican Party";
+
+/* Class = "UILabel"; text = "Company Name"; ObjectID = "RIZ-aL-UkG"; */
+"RIZ-aL-UkG.text" = "Company Name";
+
+/* Class = "UINavigationItem"; title = "Top Donors"; ObjectID = "RmZ-qe-kaM"; */
+"RmZ-qe-kaM.title" = "Top Donors";
+
+/* Class = "UINavigationItem"; title = "Politician"; ObjectID = "WCV-Fh-cHq"; */
+"WCV-Fh-cHq.title" = "Politician";
+
+/* Class = "UILabel"; text = "Rodney Frelinghuysen"; ObjectID = "Xbd-cs-Wwa"; */
+"Xbd-cs-Wwa.text" = "Rodney Frelinghuysen";
+
+/* Class = "UITabBarItem"; title = "Top Donors"; ObjectID = "Zam-4I-3zn"; */
+"Zam-4I-3zn.title" = "Top Donors";
+
+/* Class = "UILabel"; text = "House of Representatives"; ObjectID = "ei2-1O-eWi"; */
+"ei2-1O-eWi.text" = "House of Representatives";
+
+/* Class = "UINavigationItem"; title = "Where Do You Live?"; ObjectID = "gOg-Fh-kYG"; */
+"gOg-Fh-kYG.title" = "Where Do You Live?";
+
+/* Class = "UILabel"; text = "Democratic Party"; ObjectID = "gfQ-0e-2ap"; */
+"gfQ-0e-2ap.text" = "Democratic Party";
+
+/* Class = "UILabel"; text = "House of Representatives"; ObjectID = "nMn-TH-gln"; */
+"nMn-TH-gln.text" = "House of Representatives";
+
+/* Class = "UILabel"; text = "Office"; ObjectID = "qbf-ky-veW"; */
+"qbf-ky-veW.text" = "Office";
+
+/* Class = "UITabBarItem"; title = "Basic Info"; ObjectID = "tOQ-s6-sJj"; */
+"tOQ-s6-sJj.title" = "Basic Info";
+
+/* Class = "UILabel"; text = "$1,000,000"; ObjectID = "tbX-qv-y8e"; */
+"tbX-qv-y8e.text" = "$1,000,000";
+
+/* Class = "UILabel"; text = "Virginia"; ObjectID = "wiA-XG-A9z"; */
+"wiA-XG-A9z.text" = "Virginia";
+
+/* Class = "UILabel"; text = "Please locate an address within the United States and its territories."; ObjectID = "x8a-hf-e2P"; */
+"x8a-hf-e2P.text" = "Please locate an address within the United States and its territories.";
+
+/* Class = "UISearchBar"; placeholder = "Home Address"; ObjectID = "xdx-fz-nbY"; */
+"xdx-fz-nbY.placeholder" = "Home Address";
+
+/* Class = "UINavigationItem"; title = "Your Representatives"; ObjectID = "zB6-0d-VAM"; */
+"zB6-0d-VAM.title" = "Your Representatives";

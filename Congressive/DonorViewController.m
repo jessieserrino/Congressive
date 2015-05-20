@@ -33,13 +33,11 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return self.donors.count;
 }
@@ -48,7 +46,7 @@
 {
     DonorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DonorTableViewCell" forIndexPath:indexPath];
     cell.donor = self.donors[indexPath.item];
-    cell.donorName.text = [NSString stringWithFormat:@"%i. %@", (indexPath.item + 1), cell.donorName.text];
+    cell.donorName.text = [NSString stringWithFormat:@"%li. %@", (indexPath.item + 1), cell.donorName.text];
     return cell;
 }
 

@@ -28,6 +28,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *addressButton;
 
 @property (strong, nonatomic) CLGeocoder *geocoder;
+@property (strong, nonatomic) IBOutlet UINavigationItem *politicianTitle;
 
 
 @end
@@ -51,8 +52,8 @@
 
 - (void) configureHeader
 {
+    self.politicianTitle.title = self.politician.fullName;
     self.nameLabel.text = self.politician.fullName;
-    self.navigationController.navigationItem.title = self.politician.fullName;
     self.partyLabel.text = self.politician.politicalParty;
     self.chamberLabel.text = (self.politician.chamber == Senate)? @"Senate" : @"House of Representatives";
     self.politicianThumbnail.image = self.politician.politicianThumbnail;

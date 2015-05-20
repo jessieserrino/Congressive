@@ -15,22 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "910618FB1AF3CED3001476CA"
-               BuildableName = "Congressive.app"
-               BlueprintName = "Congressive"
-               ReferencedContainer = "container:Congressive.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "910619141AF3CED4001476CA"
-               BuildableName = "CongressiveTests.xctest"
-               BlueprintName = "CongressiveTests"
+               BuildableName = "congressive.app"
+               BlueprintName = "congressive"
                ReferencedContainer = "container:Congressive.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,23 +28,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "910619141AF3CED4001476CA"
-               BuildableName = "CongressiveTests.xctest"
-               BlueprintName = "CongressiveTests"
-               ReferencedContainer = "container:Congressive.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "910618FB1AF3CED3001476CA"
-            BuildableName = "Congressive.app"
-            BlueprintName = "Congressive"
+            BuildableName = "congressive.app"
+            BlueprintName = "congressive"
             ReferencedContainer = "container:Congressive.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -77,8 +53,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "910618FB1AF3CED3001476CA"
-            BuildableName = "Congressive.app"
-            BlueprintName = "Congressive"
+            BuildableName = "congressive.app"
+            BlueprintName = "congressive"
             ReferencedContainer = "container:Congressive.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -96,8 +72,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "910618FB1AF3CED3001476CA"
-            BuildableName = "Congressive.app"
-            BlueprintName = "Congressive"
+            BuildableName = "congressive.app"
+            BlueprintName = "congressive"
             ReferencedContainer = "container:Congressive.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

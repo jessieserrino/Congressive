@@ -53,7 +53,7 @@
 /* Begin PBXFileReference section */
 		3AC98C7F2CBFF92D56E7F14B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FD902C6DC0DEC520AD402B5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		910618FC1AF3CED3001476CA /* Congressive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Congressive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		910618FC1AF3CED3001476CA /* congressive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = congressive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		910619001AF3CED3001476CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		910619011AF3CED3001476CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		910619031AF3CED3001476CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		9106190A1AF3CED3001476CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9106190C1AF3CED4001476CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9106190F1AF3CED4001476CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		910619151AF3CED4001476CA /* CongressiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CongressiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		910619151AF3CED4001476CA /* congressiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = congressiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9106191A1AF3CED4001476CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9106191B1AF3CED4001476CA /* CongressiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CongressiveTests.m; sourceTree = "<group>"; };
 		910619261AF3D787001476CA /* PoliticianTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliticianTableViewController.h; sourceTree = "<group>"; };
@@ -103,6 +103,7 @@
 		915C60961B0AAA420021C3A0 /* DonorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonorViewController.h; sourceTree = "<group>"; };
 		915C60971B0AAA420021C3A0 /* DonorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonorViewController.m; sourceTree = "<group>"; };
 		915C60991B0AB8A30021C3A0 /* PoliticianDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliticianDetail.h; sourceTree = "<group>"; };
+		91C849991B0BEBF10032E189 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		91CEC8C01AF64ED3005C596B /* PoliticianProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliticianProvider.h; sourceTree = "<group>"; };
 		91CEC8C11AF64ED3005C596B /* PoliticianProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoliticianProvider.m; sourceTree = "<group>"; };
 		91CEC8CA1AF69850005C596B /* Politician.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Politician.h; sourceTree = "<group>"; };
@@ -168,8 +169,8 @@
 		910618FD1AF3CED3001476CA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				910618FC1AF3CED3001476CA /* Congressive.app */,
-				910619151AF3CED4001476CA /* CongressiveTests.xctest */,
+				910618FC1AF3CED3001476CA /* congressive.app */,
+				910619151AF3CED4001476CA /* congressiveTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -504,9 +505,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		910618FB1AF3CED3001476CA /* Congressive */ = {
+		910618FB1AF3CED3001476CA /* congressive */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9106191F1AF3CED4001476CA /* Build configuration list for PBXNativeTarget "Congressive" */;
+			buildConfigurationList = 9106191F1AF3CED4001476CA /* Build configuration list for PBXNativeTarget "congressive" */;
 			buildPhases = (
 				98A8FD4F2C26A2EA9E951338 /* Check Pods Manifest.lock */,
 				910618F81AF3CED3001476CA /* Sources */,
@@ -518,14 +519,14 @@
 			);
 			dependencies = (
 			);
-			name = Congressive;
+			name = congressive;
 			productName = Congressive;
-			productReference = 910618FC1AF3CED3001476CA /* Congressive.app */;
+			productReference = 910618FC1AF3CED3001476CA /* congressive.app */;
 			productType = "com.apple.product-type.application";
 		};
-		910619141AF3CED4001476CA /* CongressiveTests */ = {
+		910619141AF3CED4001476CA /* congressiveTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 910619221AF3CED4001476CA /* Build configuration list for PBXNativeTarget "CongressiveTests" */;
+			buildConfigurationList = 910619221AF3CED4001476CA /* Build configuration list for PBXNativeTarget "congressiveTests" */;
 			buildPhases = (
 				910619111AF3CED4001476CA /* Sources */,
 				910619121AF3CED4001476CA /* Frameworks */,
@@ -536,9 +537,9 @@
 			dependencies = (
 				910619171AF3CED4001476CA /* PBXTargetDependency */,
 			);
-			name = CongressiveTests;
+			name = congressiveTests;
 			productName = CongressiveTests;
-			productReference = 910619151AF3CED4001476CA /* CongressiveTests.xctest */;
+			productReference = 910619151AF3CED4001476CA /* congressiveTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -577,8 +578,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				910618FB1AF3CED3001476CA /* Congressive */,
-				910619141AF3CED4001476CA /* CongressiveTests */,
+				910618FB1AF3CED3001476CA /* congressive */,
+				910619141AF3CED4001476CA /* congressiveTests */,
 			);
 		};
 /* End PBXProject section */
@@ -682,7 +683,7 @@
 /* Begin PBXTargetDependency section */
 		910619171AF3CED4001476CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 910618FB1AF3CED3001476CA /* Congressive */;
+			target = 910618FB1AF3CED3001476CA /* congressive */;
 			targetProxy = 910619161AF3CED4001476CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -692,6 +693,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9106190A1AF3CED3001476CA /* Base */,
+				91C849991B0BEBF10032E189 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -792,9 +794,10 @@
 			baseConfigurationReference = 5FD902C6DC0DEC520AD402B5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jessie Serrino (2LA5QNWNJ3)";
 				INFOPLIST_FILE = Congressive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = congressive;
 			};
 			name = Debug;
 		};
@@ -803,9 +806,10 @@
 			baseConfigurationReference = DA45E7B8B237C8CA1F3EB2AB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jessie Serrino (2LA5QNWNJ3)";
 				INFOPLIST_FILE = Congressive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = congressive;
 			};
 			name = Release;
 		};
@@ -823,7 +827,7 @@
 				);
 				INFOPLIST_FILE = CongressiveTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = congressiveTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Congressive.app/Congressive";
 			};
 			name = Debug;
@@ -838,7 +842,7 @@
 				);
 				INFOPLIST_FILE = CongressiveTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = congressiveTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Congressive.app/Congressive";
 			};
 			name = Release;
@@ -855,7 +859,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9106191F1AF3CED4001476CA /* Build configuration list for PBXNativeTarget "Congressive" */ = {
+		9106191F1AF3CED4001476CA /* Build configuration list for PBXNativeTarget "congressive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				910619201AF3CED4001476CA /* Debug */,
@@ -864,7 +868,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		910619221AF3CED4001476CA /* Build configuration list for PBXNativeTarget "CongressiveTests" */ = {
+		910619221AF3CED4001476CA /* Build configuration list for PBXNativeTarget "congressiveTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				910619231AF3CED4001476CA /* Debug */,
