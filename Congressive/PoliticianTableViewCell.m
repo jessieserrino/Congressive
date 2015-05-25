@@ -11,6 +11,7 @@
 
 
 @interface PoliticianTableViewCell()
+@property (strong, nonatomic) IBOutlet UIView *backdropView;
 @end
 
 @implementation PoliticianTableViewCell
@@ -44,6 +45,14 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    [super awakeFromNib];
+    
+    UIView *view = self.backdropView;
+    view.layer.masksToBounds = NO;
+    //    view.layer.cornerRadius = 8; // if you like rounded corners
+    view.layer.shadowOffset = CGSizeMake(-2, 2);
+    view.layer.shadowRadius = 5;
+    view.layer.shadowOpacity = 0.5;
 }
 
 

@@ -38,6 +38,7 @@
         _email = dictionary[@"oc_email"];
         _office = dictionary[@"office"];
         
+        
     }
     return self;
 }

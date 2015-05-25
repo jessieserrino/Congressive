@@ -11,7 +11,7 @@
 
 @protocol PoliticianDetailProtocol <NSObject>
 
-@property (nonatomic, strong) Politician *politician;
+@property (nonatomic, weak) Politician *politician;
 
 - (void) requestDataForViewController;
 

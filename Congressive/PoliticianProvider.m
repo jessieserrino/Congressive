@@ -8,6 +8,15 @@
 
 #import "PoliticianProvider.h"
 
+static NSString * const kBaseDomain = @"http://congress.api.sunlightfoundation.com";
+static NSString * const kAPIKey = @"Sunlight_APIKey";
+static NSString * const kAPIKeyQuery = @"apikey";
+static NSString * const kLatitudeQuery = @"latitude";
+static NSString * const kLongitudeQuery = @"longitude";
+static NSString * const kOrderQuery = @"order";
+static NSString * const kOrderByChamber = @"chamber";
+static NSString * const kLegislatorSubdomain = @"legislators/locate";
+
 
 @implementation PoliticianProvider
 
@@ -15,9 +24,9 @@
 {
     self = [super init];
     if (self) {
-        NSString *apikey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Sunlight_APIKey"];
-        self.baseDomain = @"http://congress.api.sunlightfoundation.com";
-        self.defaultParams = [[NSDictionary alloc] initWithObjects:@[apikey, @"chamber"] forKeys:@[@"apikey", @"order"]];
+        NSString *apikey = [[NSBundle mainBundle] objectForInfoDictionaryKey:kAPIKey];
+        self.baseDomain = kBaseDomain;
+        self.defaultParams = [[NSDictionary alloc] initWithObjects:@[apikey, kOrderByChamber] forKeys:@[kAPIKeyQuery, kOrderQuery]];
     }
 
     return self;
@@ -38,10 +47,10 @@
     NSString *latitude = [NSString stringWithFormat:@"%f", location.latitude];
     NSString *longitude = [NSString stringWithFormat:@"%f", location.longitude];
 
-    [self GET:@"legislators/locate"
+    [self GET:kLegislatorSubdomain
             parameters:[[NSDictionary alloc]
                         initWithObjects:@[latitude, longitude]
-                        forKeys:@[@"latitude", @"longitude"]]
+                        forKeys:@[kLatitudeQuery, kLongitudeQuery]]
             completion:successBlock
             error:errorBlock];
 }

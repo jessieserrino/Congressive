@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 #import "UserDistrictViewController.h"
 #import "PoliticianTableViewController.h"
 #import "PoliticianInteractor.h"
@@ -17,14 +18,22 @@
 
 @implementation AppDelegate
 
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
 
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"HyjSRhrYSTn1pildAXU7B8lN0E72ZfTKnaJBtMvO"
+                  clientKey:@"oMW1vBInCHji8FrpVJV1NVpbhXiwzmtMnT8hXfAo"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     if([userDefaults objectForKey:@"hasSavedPoliticians"])
        [self restorePoliticians];
+    
+    //[self.window setTintColor:[UIColor whiteColor]];
+
     
     return YES;
 }
@@ -32,8 +41,6 @@
 - (void) restorePoliticians
 {
     UINavigationController *nav = (UINavigationController *) self.window.rootViewController;
-    [nav pushViewController:[[PoliticianTableViewController alloc] init] animated:NO];
-    
     [nav pushViewController: [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PoliticianTableViewController"] animated:NO];
 }
 

@@ -11,6 +11,6 @@
 
 @interface TabBarViewController : UITabBarController
 
-@property (nonatomic, strong) Politician *politician;
+@property (nonatomic, weak) Politician *politician;
 
 @end

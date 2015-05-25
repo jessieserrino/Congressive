@@ -8,6 +8,8 @@
 
 #import "PoliticianInteractor.h"
 #import "PoliticianProvider.h"
+#import "BiographyProvider.h"
+#import "BiographyInteractor.h"
 #import "Politician.h"
 #import <Foundation/Foundation.h>
 
@@ -44,9 +46,7 @@
     NSMutableArray *politicians = [[NSMutableArray alloc] initWithCapacity:count];
     NSArray *results = data[@"results"];
     for(NSDictionary *senatorData in results)
-    {
         [politicians addObject:[[Politician alloc] initWithDictionary:senatorData]];
-    }
     return politicians;
 }
 

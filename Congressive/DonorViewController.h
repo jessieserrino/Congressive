@@ -10,7 +10,7 @@
 
 @interface DonorViewController : UITableViewController <PoliticianDetailProtocol, UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) Politician *politician;
-@property (nonatomic, strong) NSArray *donors;
+@property (nonatomic, weak) Politician *politician;
+@property (nonatomic, weak) NSArray *donors;
 
 @end

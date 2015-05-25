@@ -11,6 +11,8 @@
 #import "SpinningWheelView.h"
 #import "PoliticianProvider.h"
 #import "PoliticianInteractor.h"
+#import "BiographyProvider.h"
+#import "BiographyInteractor.h"
 
 @import MapKit;
 
@@ -30,8 +32,6 @@
 
 @implementation UserDistrictViewController
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -39,16 +39,6 @@
     
     self.searchBar.delegate = self;
     [self prepareLocationManager];
-}
-
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void) viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
 }
 
 - (void) prepareLocationManager
@@ -97,11 +87,6 @@
     
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 - (IBAction)doneButtonPressed:(UIBarButtonItem *)sender {
     self.doneButton.enabled = NO;
     [self.spinningWheel startAnimating];
@@ -110,6 +95,7 @@
         [self.spinningWheel stopAnimating];
         if([[PoliticianInteractor sharedInteractor] politiciansWithData:data])
         {
+            
             [self setError:NO];
             [self performSegueWithIdentifier: @"SegueToPoliticianList" sender:self];
         }
@@ -168,10 +154,6 @@
     [self.map setRegion:adjustedRegion animated:YES];
 }
 
-#pragma mark - Navigation
-
-
-//}
 
 
 @end

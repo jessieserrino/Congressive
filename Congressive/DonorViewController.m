@@ -12,7 +12,7 @@
 #import "DonorTableViewCell.h"
 
 @interface DonorViewController ()
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinningWheel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinningWheel;
 
 @end
 
@@ -26,6 +26,7 @@
     self.spinningWheel.center = self.view.center;
     self.tableView.hidden = NO;
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

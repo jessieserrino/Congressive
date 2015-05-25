@@ -36,11 +36,6 @@
     return _politicians;
 }
 
-- (void) loadCells
-{
-}
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

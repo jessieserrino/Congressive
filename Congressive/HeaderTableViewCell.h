@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Politician.h"
+#import "DetailCellProtocol.h"
 
-
-@interface HeaderTableViewCell : UITableViewCell
+@interface HeaderTableViewCell : UITableViewCell <DetailCellProtocol>
 
 - (void) prepareWithPolitician: (Politician *) politician;
 

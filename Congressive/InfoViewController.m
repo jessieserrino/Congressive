@@ -8,26 +8,18 @@
 
 #import "InfoViewController.h"
 #import "HeaderTableViewCell.h"
-#import "InformationTableViewCell.h"
+#import "BiographyTableViewCell.h"
 #import "ExternalAppManager.h"
-#import <MapKit/MapKit.h>
-#import "MapPin.h"
+#import "DetailCellProtocol.h"
 
+
+static NSInteger const BiographyCell = 2;
 
 @interface InfoViewController ()
 
-@property (strong, nonatomic) IBOutlet UIImageView *politicianThumbnail;
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *partyLabel;
-@property (strong, nonatomic) IBOutlet UILabel *chamberLabel;
-
-@property (strong, nonatomic) IBOutlet UIButton *telephoneButton;
-@property (strong, nonatomic) IBOutlet UIButton *emailButton;
-@property (strong, nonatomic) IBOutlet UIButton *websiteButton;
-@property (strong, nonatomic) IBOutlet MKMapView *map;
-@property (strong, nonatomic) IBOutlet UIButton *addressButton;
-
-@property (strong, nonatomic) CLGeocoder *geocoder;
+@property (weak, nonatomic) IBOutlet BiographyTableViewCell *biographyCell;
+@property (nonatomic) BOOL foundBiography;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinningBiographyWheel;
 @property (strong, nonatomic) IBOutlet UINavigationItem *politicianTitle;
 
 
@@ -35,75 +27,34 @@
 
 @implementation InfoViewController
 
+
+/* Observer necessary to determine if the biography needs expanding */
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
+
+    _foundBiography = NO;
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-
-    [self configureHeader];
-    [self configureContactInformation];
-    [self configureMap];
+    [self.biographyCell addObserver:self forKeyPath:@"self.specialHeight" options:NSKeyValueObservingOptionNew context:nil];
 }
 
-- (void) configureHeader
+- (void) viewDidDisappear:(BOOL)animated
 {
-    self.politicianTitle.title = self.politician.fullName;
-    self.nameLabel.text = self.politician.fullName;
-    self.partyLabel.text = self.politician.politicalParty;
-    self.chamberLabel.text = (self.politician.chamber == Senate)? @"Senate" : @"House of Representatives";
-    self.politicianThumbnail.image = self.politician.politicianThumbnail;
+    [super viewDidDisappear:animated];
+    [self.biographyCell  removeObserver:self forKeyPath:@"self.specialHeight"];
 }
 
-- (void) configureContactInformation
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    [self setButtonTitle:self.telephoneButton withTitle:self.politician.phoneNumber];
-    [self setButtonTitle:self.websiteButton withTitle:self.politician.website.description];
-    [self setButtonTitle:self.emailButton withTitle:self.politician.email];
-}
-
-- (void) configureMap
-{
-    NSString *addressString = [NSString stringWithFormat:@"%@, D.C.", self.politician.office];
-    [self.addressButton setTitle:addressString forState:UIControlStateNormal];
-    [self.geocoder geocodeAddressString:addressString
-                      completionHandler:^(NSArray* placemarks, NSError* error){
-                          if(placemarks.count > 0)
-                          {
-                              CLPlacemark *placemark = placemarks[0];
-                              [self.map setCenterCoordinate:placemark.location.coordinate];
-                              MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(placemark.location.coordinate, 1000, 1000);
-                              MKCoordinateRegion adjustedRegion = [self.map regionThatFits:viewRegion];
-                              [self.map setRegion:adjustedRegion animated:YES];
-                              MapPin *pin = [[MapPin alloc] init];
-                              pin.title = [NSString stringWithFormat: @"%@'s Office", self.politician.fullName];
-                              pin.coordinate = placemark.location.coordinate;
-                              [self.map addAnnotation:pin];
-
-                          }
-                      }];
-}
-
-- (void) setButtonTitle: (UIButton *) button withTitle: (NSString *) title
-{
-    CGFloat spacing = 10; // the amount of spacing to appear between image and title
-    button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, spacing);
-    button.titleEdgeInsets = UIEdgeInsetsMake(0, spacing, 0, 0);
-    [button setTitle:title forState:UIControlStateNormal];
-}
-
-
-- (CLGeocoder *)geocoder
-{
-    if(!_geocoder)
+    if([keyPath isEqualToString:@"self.specialHeight"]  && !self.foundBiography)
     {
-        _geocoder = [[CLGeocoder alloc] init];
+        [self.tableView reloadData];
+        [self.tableView layoutIfNeeded];
+        _foundBiography = YES;
     }
-    return _geocoder;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -111,33 +62,35 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)facebookButtonPressed:(UIButton *)sender {
-    [ExternalAppManager open:Facebook WithPolitician:self.politician];
-}
-- (IBAction)twitterButtonPressed:(UIButton *)sender {
-    [ExternalAppManager open:Twitter WithPolitician:self.politician];
-}
-- (IBAction)youtubeButtonPressed:(UIButton *)sender {
-    [ExternalAppManager open:YouTube WithPolitician:self.politician];
-}
 
-- (IBAction)telephoneButtonPushed:(UIButton *)sender {
-    [ExternalAppManager open:Phone WithPolitician:self.politician];
-}
-- (IBAction)emailButtonPushed:(UIButton *)sender {
-    [ExternalAppManager open:Email WithPolitician:self.politician];
-}
-
-- (IBAction)websiteButtonPushed:(UIButton *)sender {
-    [ExternalAppManager open:WebBrowser WithPolitician:self.politician];
-}
-
-- (IBAction)addressButtonPushed:(id)sender {
-    [ExternalAppManager open:Maps WithPolitician:self.politician];
-}
 
 - (void) requestDataForViewController
 {
+}
+
+
+/* Basic methods that set up the table view */
+
+
+- (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell <DetailCellProtocol> *cell =  (UITableViewCell<DetailCellProtocol> *) [super tableView: tableView cellForRowAtIndexPath:indexPath];
+    
+    [cell prepareWithPolitician:self.politician];
+    return cell;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.item == BiographyCell && self.biographyCell.specialHeight)
+    {
+        return self.biographyCell.specialHeight;
+    }
+    else
+    {
+        return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+    }
     
 }
 

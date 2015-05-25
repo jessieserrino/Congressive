@@ -18,6 +18,21 @@
 		9106192E1AF3D7E2001476CA /* PoliticianTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9106192D1AF3D7E2001476CA /* PoliticianTableViewCell.m */; };
 		910656211AF3F6C500D9BFC8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910656201AF3F6C500D9BFC8 /* MapKit.framework */; };
 		9106562D1AF3FAA500D9BFC8 /* AFNRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9106562C1AF3FAA500D9BFC8 /* AFNRequestManager.m */; };
+		911A3B6E1B0D112C002949B0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911A3B6D1B0D112C002949B0 /* Accounts.framework */; };
+		911A3B701B0D1133002949B0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911A3B6F1B0D1133002949B0 /* AudioToolbox.framework */; };
+		911A3B721B0D1141002949B0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911A3B711B0D1141002949B0 /* CFNetwork.framework */; };
+		911A3B741B0D1159002949B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911A3B731B0D1159002949B0 /* CoreGraphics.framework */; };
+		911A3B761B0D1166002949B0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911A3B751B0D1166002949B0 /* CoreLocation.framework */; };
+		911A3B781B0D1170002949B0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 911A3B771B0D1170002949B0 /* libz.dylib */; };
+		911A3B7A1B0D1178002949B0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911A3B791B0D1178002949B0 /* MobileCoreServices.framework */; };
+		911A3B7C1B0D1180002949B0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911A3B7B1B0D1180002949B0 /* QuartzCore.framework */; };
+		911A3B7E1B0D1187002949B0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911A3B7D1B0D1187002949B0 /* Security.framework */; };
+		911A3B801B0D118D002949B0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911A3B7F1B0D118D002949B0 /* Social.framework */; };
+		911A3B821B0D1195002949B0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911A3B811B0D1195002949B0 /* StoreKit.framework */; };
+		911A3B841B0D11B0002949B0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911A3B831B0D11B0002949B0 /* SystemConfiguration.framework */; };
+		911A3B9A1B0D149A002949B0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911A3B991B0D149A002949B0 /* Bolts.framework */; };
+		911A3B9C1B0D14AC002949B0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911A3B9B1B0D14AC002949B0 /* Parse.framework */; };
+		911A3B9E1B0D14E1002949B0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 911A3B9D1B0D14E1002949B0 /* libsqlite3.dylib */; };
 		911EB0DB1B0AF5F200A7FF57 /* DonorDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB0DA1B0AF5F200A7FF57 /* DonorDataProvider.m */; };
 		911EB0DF1B0AF7D700A7FF57 /* PoliticianIDProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB0DE1B0AF7D700A7FF57 /* PoliticianIDProvider.m */; };
 		911EB0E51B0B01A200A7FF57 /* BillProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EB0E41B0B01A200A7FF57 /* BillProvider.m */; };
@@ -33,6 +48,12 @@
 		915A442F1AF96E1B00FFCC0E /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915A442E1AF96E1B00FFCC0E /* InfoViewController.m */; };
 		915C60901B0AA6DD0021C3A0 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915C608F1B0AA6DD0021C3A0 /* TabBarViewController.m */; };
 		915C60981B0AAA420021C3A0 /* DonorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915C60971B0AAA420021C3A0 /* DonorViewController.m */; };
+		9167703E1B12CF9300C3D34E /* HeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9167703D1B12CF9300C3D34E /* HeaderTableViewCell.m */; };
+		916770431B12D7DC00C3D34E /* BiographyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 916770421B12D7DC00C3D34E /* BiographyTableViewCell.m */; };
+		916770461B12DD7600C3D34E /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 916770451B12DD7600C3D34E /* ContactTableViewCell.m */; };
+		9167704B1B12F72600C3D34E /* MapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9167704A1B12F72600C3D34E /* MapTableViewCell.m */; };
+		91AA0A2F1B0FAE430009692F /* BiographyProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AA0A2E1B0FAE430009692F /* BiographyProvider.m */; };
+		91AA0A331B0FAFD40009692F /* BiographyInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AA0A321B0FAFD40009692F /* BiographyInteractor.m */; };
 		91CEC8C21AF64ED3005C596B /* PoliticianProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8C11AF64ED3005C596B /* PoliticianProvider.m */; };
 		91CEC8CC1AF69850005C596B /* Politician.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8CB1AF69850005C596B /* Politician.m */; };
 		91CEC8D01AF6998B005C596B /* PoliticianInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8CF1AF6998B005C596B /* PoliticianInteractor.m */; };
@@ -72,6 +93,21 @@
 		910656271AF3FA0100D9BFC8 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
 		9106562B1AF3FAA500D9BFC8 /* AFNRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNRequestManager.h; sourceTree = "<group>"; };
 		9106562C1AF3FAA500D9BFC8 /* AFNRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNRequestManager.m; sourceTree = "<group>"; };
+		911A3B6D1B0D112C002949B0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		911A3B6F1B0D1133002949B0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		911A3B711B0D1141002949B0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		911A3B731B0D1159002949B0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		911A3B751B0D1166002949B0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		911A3B771B0D1170002949B0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		911A3B791B0D1178002949B0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		911A3B7B1B0D1180002949B0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		911A3B7D1B0D1187002949B0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		911A3B7F1B0D118D002949B0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		911A3B811B0D1195002949B0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		911A3B831B0D11B0002949B0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		911A3B991B0D149A002949B0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Congressive/Bolts.framework; sourceTree = "<group>"; };
+		911A3B9B1B0D14AC002949B0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Congressive/Parse.framework; sourceTree = "<group>"; };
+		911A3B9D1B0D14E1002949B0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		911EB0D91B0AF5F200A7FF57 /* DonorDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonorDataProvider.h; sourceTree = "<group>"; };
 		911EB0DA1B0AF5F200A7FF57 /* DonorDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonorDataProvider.m; sourceTree = "<group>"; };
 		911EB0DD1B0AF7D700A7FF57 /* PoliticianIDProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliticianIDProvider.h; sourceTree = "<group>"; };
@@ -103,6 +139,19 @@
 		915C60961B0AAA420021C3A0 /* DonorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonorViewController.h; sourceTree = "<group>"; };
 		915C60971B0AAA420021C3A0 /* DonorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonorViewController.m; sourceTree = "<group>"; };
 		915C60991B0AB8A30021C3A0 /* PoliticianDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliticianDetail.h; sourceTree = "<group>"; };
+		9167703C1B12CF9300C3D34E /* HeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderTableViewCell.h; sourceTree = "<group>"; };
+		9167703D1B12CF9300C3D34E /* HeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderTableViewCell.m; sourceTree = "<group>"; };
+		9167703F1B12D67500C3D34E /* DetailCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCellProtocol.h; sourceTree = "<group>"; };
+		916770411B12D7DC00C3D34E /* BiographyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiographyTableViewCell.h; sourceTree = "<group>"; };
+		916770421B12D7DC00C3D34E /* BiographyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiographyTableViewCell.m; sourceTree = "<group>"; };
+		916770441B12DD7600C3D34E /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
+		916770451B12DD7600C3D34E /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
+		916770491B12F72600C3D34E /* MapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTableViewCell.h; sourceTree = "<group>"; };
+		9167704A1B12F72600C3D34E /* MapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTableViewCell.m; sourceTree = "<group>"; };
+		91AA0A2D1B0FAE430009692F /* BiographyProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiographyProvider.h; sourceTree = "<group>"; };
+		91AA0A2E1B0FAE430009692F /* BiographyProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiographyProvider.m; sourceTree = "<group>"; };
+		91AA0A311B0FAFD40009692F /* BiographyInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiographyInteractor.h; sourceTree = "<group>"; };
+		91AA0A321B0FAFD40009692F /* BiographyInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiographyInteractor.m; sourceTree = "<group>"; };
 		91C849991B0BEBF10032E189 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		91CEC8C01AF64ED3005C596B /* PoliticianProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliticianProvider.h; sourceTree = "<group>"; };
 		91CEC8C11AF64ED3005C596B /* PoliticianProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoliticianProvider.m; sourceTree = "<group>"; };
@@ -122,6 +171,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				911A3B9E1B0D14E1002949B0 /* libsqlite3.dylib in Frameworks */,
+				911A3B9A1B0D149A002949B0 /* Bolts.framework in Frameworks */,
+				911A3B841B0D11B0002949B0 /* SystemConfiguration.framework in Frameworks */,
+				911A3B821B0D1195002949B0 /* StoreKit.framework in Frameworks */,
+				911A3B801B0D118D002949B0 /* Social.framework in Frameworks */,
+				911A3B7E1B0D1187002949B0 /* Security.framework in Frameworks */,
+				911A3B7C1B0D1180002949B0 /* QuartzCore.framework in Frameworks */,
+				911A3B9C1B0D14AC002949B0 /* Parse.framework in Frameworks */,
+				911A3B7A1B0D1178002949B0 /* MobileCoreServices.framework in Frameworks */,
+				911A3B781B0D1170002949B0 /* libz.dylib in Frameworks */,
+				911A3B761B0D1166002949B0 /* CoreLocation.framework in Frameworks */,
+				911A3B741B0D1159002949B0 /* CoreGraphics.framework in Frameworks */,
+				911A3B721B0D1141002949B0 /* CFNetwork.framework in Frameworks */,
+				911A3B701B0D1133002949B0 /* AudioToolbox.framework in Frameworks */,
+				911A3B6E1B0D112C002949B0 /* Accounts.framework in Frameworks */,
 				910656211AF3F6C500D9BFC8 /* MapKit.framework in Frameworks */,
 				88512CA8138814D7138D94F9 /* libPods.a in Frameworks */,
 			);
@@ -157,7 +221,7 @@
 		910618F31AF3CED3001476CA = {
 			isa = PBXGroup;
 			children = (
-				910656201AF3F6C500D9BFC8 /* MapKit.framework */,
+				911A3B621B0D1061002949B0 /* Frameworks */,
 				910618FE1AF3CED3001476CA /* Congressive */,
 				910619181AF3CED4001476CA /* CongressiveTests */,
 				910618FD1AF3CED3001476CA /* Products */,
@@ -241,6 +305,7 @@
 		9106192A1AF3D7C2001476CA /* Politician Detail */ = {
 			isa = PBXGroup;
 			children = (
+				916770481B12DE3E00C3D34E /* Detail Cells */,
 				911EB1091B0BAA8A00A7FF57 /* MapPin */,
 				915A442D1AF96E1B00FFCC0E /* InfoViewController.h */,
 				915A442E1AF96E1B00FFCC0E /* InfoViewController.m */,
@@ -280,6 +345,7 @@
 		9106562A1AF3FA0900D9BFC8 /* Fetching Data */ = {
 			isa = PBXGroup;
 			children = (
+				91AA0A2C1B0FADA90009692F /* Bio Data */,
 				911EB0E21B0B017C00A7FF57 /* Bill Data */,
 				911EB0DC1B0AF5F800A7FF57 /* Finance Data */,
 				91CEC8BF1AF64DA2005C596B /* Politician Provider */,
@@ -296,6 +362,29 @@
 				9106562C1AF3FAA500D9BFC8 /* AFNRequestManager.m */,
 			);
 			name = "Core Request";
+			sourceTree = "<group>";
+		};
+		911A3B621B0D1061002949B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				911A3B9D1B0D14E1002949B0 /* libsqlite3.dylib */,
+				911A3B9B1B0D14AC002949B0 /* Parse.framework */,
+				911A3B991B0D149A002949B0 /* Bolts.framework */,
+				911A3B831B0D11B0002949B0 /* SystemConfiguration.framework */,
+				911A3B811B0D1195002949B0 /* StoreKit.framework */,
+				911A3B7F1B0D118D002949B0 /* Social.framework */,
+				911A3B7D1B0D1187002949B0 /* Security.framework */,
+				911A3B7B1B0D1180002949B0 /* QuartzCore.framework */,
+				911A3B791B0D1178002949B0 /* MobileCoreServices.framework */,
+				911A3B771B0D1170002949B0 /* libz.dylib */,
+				911A3B751B0D1166002949B0 /* CoreLocation.framework */,
+				911A3B731B0D1159002949B0 /* CoreGraphics.framework */,
+				911A3B711B0D1141002949B0 /* CFNetwork.framework */,
+				911A3B6F1B0D1133002949B0 /* AudioToolbox.framework */,
+				911A3B6D1B0D112C002949B0 /* Accounts.framework */,
+				910656201AF3F6C500D9BFC8 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		911EB0DC1B0AF5F800A7FF57 /* Finance Data */ = {
@@ -456,6 +545,54 @@
 			name = "Base Controller";
 			sourceTree = "<group>";
 		};
+		9167703B1B12CF4F00C3D34E /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				9167703C1B12CF9300C3D34E /* HeaderTableViewCell.h */,
+				9167703D1B12CF9300C3D34E /* HeaderTableViewCell.m */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		916770401B12D7C900C3D34E /* Bio */ = {
+			isa = PBXGroup;
+			children = (
+				916770411B12D7DC00C3D34E /* BiographyTableViewCell.h */,
+				916770421B12D7DC00C3D34E /* BiographyTableViewCell.m */,
+			);
+			name = Bio;
+			sourceTree = "<group>";
+		};
+		916770471B12DE2C00C3D34E /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				916770441B12DD7600C3D34E /* ContactTableViewCell.h */,
+				916770451B12DD7600C3D34E /* ContactTableViewCell.m */,
+			);
+			name = Contact;
+			sourceTree = "<group>";
+		};
+		916770481B12DE3E00C3D34E /* Detail Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9167703F1B12D67500C3D34E /* DetailCellProtocol.h */,
+				9167703B1B12CF4F00C3D34E /* Header */,
+				916770471B12DE2C00C3D34E /* Contact */,
+				916770401B12D7C900C3D34E /* Bio */,
+				9167704C1B12F72C00C3D34E /* Map */,
+			);
+			name = "Detail Cells";
+			sourceTree = "<group>";
+		};
+		9167704C1B12F72C00C3D34E /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				916770491B12F72600C3D34E /* MapTableViewCell.h */,
+				9167704A1B12F72600C3D34E /* MapTableViewCell.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		918A7CCC1AFB02390071BB98 /* Politician */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +600,24 @@
 				91CEC8CF1AF6998B005C596B /* PoliticianInteractor.m */,
 			);
 			name = Politician;
+			sourceTree = "<group>";
+		};
+		91AA0A2C1B0FADA90009692F /* Bio Data */ = {
+			isa = PBXGroup;
+			children = (
+				91AA0A2D1B0FAE430009692F /* BiographyProvider.h */,
+				91AA0A2E1B0FAE430009692F /* BiographyProvider.m */,
+			);
+			name = "Bio Data";
+			sourceTree = "<group>";
+		};
+		91AA0A301B0FAFC30009692F /* Bio */ = {
+			isa = PBXGroup;
+			children = (
+				91AA0A311B0FAFD40009692F /* BiographyInteractor.h */,
+				91AA0A321B0FAFD40009692F /* BiographyInteractor.m */,
+			);
+			name = Bio;
 			sourceTree = "<group>";
 		};
 		91CEC8BF1AF64DA2005C596B /* Politician Provider */ = {
@@ -477,6 +632,7 @@
 		91CEC8CD1AF69969005C596B /* Processing */ = {
 			isa = PBXGroup;
 			children = (
+				91AA0A301B0FAFC30009692F /* Bio */,
 				911EB0E91B0B0CEE00A7FF57 /* Donor */,
 				911EB0E61B0B0CBB00A7FF57 /* Bill */,
 				918A7CCC1AFB02390071BB98 /* Politician */,
@@ -553,6 +709,7 @@
 				TargetAttributes = {
 					910618FB1AF3CED3001476CA = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 2LA5QNWNJ3;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -644,23 +801,29 @@
 			files = (
 				91CEC8D31AF6A0AC005C596B /* SpinningWheelView.m in Sources */,
 				911EB1041B0B134800A7FF57 /* DonorTableViewCell.m in Sources */,
+				916770461B12DD7600C3D34E /* ContactTableViewCell.m in Sources */,
 				915C60901B0AA6DD0021C3A0 /* TabBarViewController.m in Sources */,
 				9106562D1AF3FAA500D9BFC8 /* AFNRequestManager.m in Sources */,
 				915C60981B0AAA420021C3A0 /* DonorViewController.m in Sources */,
 				91E34C631B0AE96500628032 /* ExternalAppManager.m in Sources */,
 				91CEC8CC1AF69850005C596B /* Politician.m in Sources */,
 				911EB0E51B0B01A200A7FF57 /* BillProvider.m in Sources */,
+				9167703E1B12CF9300C3D34E /* HeaderTableViewCell.m in Sources */,
 				911EB0EC1B0B0CFE00A7FF57 /* DonorInteractor.m in Sources */,
 				911EB0F81B0B0E8200A7FF57 /* Bill.m in Sources */,
 				911EB0FC1B0B0E9A00A7FF57 /* Donor.m in Sources */,
 				911EB1001B0B102500A7FF57 /* BillTableViewController.m in Sources */,
 				911EB1071B0B216B00A7FF57 /* BillTableViewCell.m in Sources */,
 				91CEC8C21AF64ED3005C596B /* PoliticianProvider.m in Sources */,
+				9167704B1B12F72600C3D34E /* MapTableViewCell.m in Sources */,
+				91AA0A2F1B0FAE430009692F /* BiographyProvider.m in Sources */,
 				91CEC8D01AF6998B005C596B /* PoliticianInteractor.m in Sources */,
 				911EB0DB1B0AF5F200A7FF57 /* DonorDataProvider.m in Sources */,
+				91AA0A331B0FAFD40009692F /* BiographyInteractor.m in Sources */,
 				911EB10C1B0BAAA100A7FF57 /* MapPin.m in Sources */,
 				911F76EA1AF3F22D00481CD3 /* UserDistrictViewController.m in Sources */,
 				910619281AF3D787001476CA /* PoliticianTableViewController.m in Sources */,
+				916770431B12D7DC00C3D34E /* BiographyTableViewCell.m in Sources */,
 				910619051AF3CED3001476CA /* AppDelegate.m in Sources */,
 				910619021AF3CED3001476CA /* main.m in Sources */,
 				9106192E1AF3D7E2001476CA /* PoliticianTableViewCell.m in Sources */,
@@ -794,10 +957,17 @@
 			baseConfigurationReference = 5FD902C6DC0DEC520AD402B5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jessie Serrino (2LA5QNWNJ3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Congressive",
+				);
 				INFOPLIST_FILE = Congressive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = congressive;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -806,10 +976,17 @@
 			baseConfigurationReference = DA45E7B8B237C8CA1F3EB2AB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jessie Serrino (2LA5QNWNJ3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Congressive",
+				);
 				INFOPLIST_FILE = Congressive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = congressive;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
