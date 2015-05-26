@@ -9,3 +9,10 @@ Congressive is an iOS app aimed at getting American citizens in contact with the
 - Check out biographical information of each politician, as well as review each politician's top campaign donors
 
 ###Check out some screenshots of the app here:
+
+![Alt](/Congressive_Screenshots/IMG_1757.jpg)
+![Alt](/Congressive_Screenshots/thumb_IMG_1753_1024.jpg)
+![Alt ](/Congressive_Screenshots/thumb_IMG_1752_1024.jpg)
+![Alt ](/Congressive_Screenshots/thumb_IMG_1754_1024.jpg)
+![Alt ](/Congressive_Screenshots/thumb_IMG_1755_1024.jpg)
+![Alt ](/Congressive_Screenshots/thumb_IMG_1756_1024.jpg)
