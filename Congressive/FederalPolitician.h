@@ -46,7 +46,5 @@ typedef enum : NSUInteger {
 
 
 - (instancetype)initWithDictionary: (NSDictionary *) dictionary;
-+ (instancetype) fakePolitician;
-
 
 @end

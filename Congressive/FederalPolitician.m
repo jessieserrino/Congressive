@@ -43,22 +43,6 @@
     return self;
 }
 
-+ (instancetype) fakePolitician
-{
-    FederalPolitician * p = [[FederalPolitician alloc] init];
-    p.firstName = @"Elizabeth";
-    p.lastName = @"Fairfield";
-    p.phoneNumber = @"847-309-9966";
-    p.email = @"RepFairfield@opencongress.org";
-    p.website = [NSURL URLWithString: @"http://www.elizabethfairfield.com"];
-    p.politicalParty = @"Democratic Party";
-    p.chamber = HouseOfRepresentatives;
-    
-    
-    
-    return p;
-}
-
 - (NSString *)fullName
 {
     return [NSString stringWithFormat:@"%@ %@", _firstName, _lastName ];

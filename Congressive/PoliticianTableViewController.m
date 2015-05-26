@@ -62,12 +62,12 @@ static NSUInteger const StateSection;
     return 0;
 }
 
-- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    if(section == FederalSection)
-        return @"Federal";
-    return @"State";
-}
+//- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    if(section == FederalSection)
+//        return @"Federal";
+//    return @"State";
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PoliticianTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([PoliticianTableViewCell class]) forIndexPath:indexPath];
