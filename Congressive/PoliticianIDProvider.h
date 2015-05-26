@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNRequestManager.h"
-#import "Politician.h"
+#import "FederalPolitician.h"
 
 
 
 @interface PoliticianIDProvider : AFNRequestManager
 
 + (instancetype) sharedProvider;
-- (void) IDforPolitician: (Politician *) politician withCompletion: (SuccessBlock) successBlock andError: (ErrorBlock) errorBlock;
+- (void) IDforPolitician: (FederalPolitician *) politician withCompletion: (SuccessBlock) successBlock andError: (ErrorBlock) errorBlock;
 
 @end

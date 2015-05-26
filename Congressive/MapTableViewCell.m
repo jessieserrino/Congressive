@@ -12,7 +12,7 @@
 
 @interface MapTableViewCell()
 
-@property (nonatomic, strong) Politician *politician;
+@property (nonatomic, strong) FederalPolitician *politician;
 
 @property (weak, nonatomic) IBOutlet UIView *paperView;
 @property (weak, nonatomic) IBOutlet MKMapView *map;
@@ -31,7 +31,7 @@
 }
 
 
-- (void)prepareWithPolitician:(Politician *)politician
+- (void)prepareWithPolitician:(FederalPolitician *)politician
 {
     _politician = politician;
 //    self.addressButton.titleLabel.text = self.politician.office;

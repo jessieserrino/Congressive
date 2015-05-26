@@ -35,7 +35,7 @@
     return sharedProvider;
 }
 
-- (void) loadFinancialDataWithPolitician: (Politician *) politician successBlock: (SuccessBlock) successBlock errorBlock: (ErrorBlock) errorBlock
+- (void) loadFinancialDataWithPolitician: (FederalPolitician *) politician successBlock: (SuccessBlock) successBlock errorBlock: (ErrorBlock) errorBlock
 {
     [[PoliticianIDProvider sharedProvider] IDforPolitician:politician withCompletion:^(id data) {
         NSString *identifier = data[0][@"id"];

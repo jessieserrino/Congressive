@@ -11,6 +11,6 @@
 
 @interface ContactTableViewCell : UITableViewCell <DetailCellProtocol>
 
-- (void)prepareWithPolitician:(Politician *)politician;
+- (void)prepareWithPolitician:(FederalPolitician *)politician;
 
 @end

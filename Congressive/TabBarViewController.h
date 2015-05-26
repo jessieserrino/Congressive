@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Politician.h"
+#import "FederalPolitician.h"
 
 @interface TabBarViewController : UITabBarController
 
-@property (nonatomic, weak) Politician *politician;
+@property (nonatomic, weak) FederalPolitician *politician;
 
 @end

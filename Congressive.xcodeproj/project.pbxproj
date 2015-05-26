@@ -55,7 +55,7 @@
 		91AA0A2F1B0FAE430009692F /* BiographyProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AA0A2E1B0FAE430009692F /* BiographyProvider.m */; };
 		91AA0A331B0FAFD40009692F /* BiographyInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AA0A321B0FAFD40009692F /* BiographyInteractor.m */; };
 		91CEC8C21AF64ED3005C596B /* PoliticianProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8C11AF64ED3005C596B /* PoliticianProvider.m */; };
-		91CEC8CC1AF69850005C596B /* Politician.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8CB1AF69850005C596B /* Politician.m */; };
+		91CEC8CC1AF69850005C596B /* FederalPolitician.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8CB1AF69850005C596B /* FederalPolitician.m */; };
 		91CEC8D01AF6998B005C596B /* PoliticianInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8CF1AF6998B005C596B /* PoliticianInteractor.m */; };
 		91CEC8D31AF6A0AC005C596B /* SpinningWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CEC8D21AF6A0AC005C596B /* SpinningWheelView.m */; };
 		91E34C631B0AE96500628032 /* ExternalAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E34C621B0AE96500628032 /* ExternalAppManager.m */; };
@@ -155,8 +155,8 @@
 		91C849991B0BEBF10032E189 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		91CEC8C01AF64ED3005C596B /* PoliticianProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliticianProvider.h; sourceTree = "<group>"; };
 		91CEC8C11AF64ED3005C596B /* PoliticianProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoliticianProvider.m; sourceTree = "<group>"; };
-		91CEC8CA1AF69850005C596B /* Politician.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Politician.h; sourceTree = "<group>"; };
-		91CEC8CB1AF69850005C596B /* Politician.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Politician.m; sourceTree = "<group>"; };
+		91CEC8CA1AF69850005C596B /* FederalPolitician.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FederalPolitician.h; sourceTree = "<group>"; };
+		91CEC8CB1AF69850005C596B /* FederalPolitician.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FederalPolitician.m; sourceTree = "<group>"; };
 		91CEC8CE1AF6998B005C596B /* PoliticianInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliticianInteractor.h; sourceTree = "<group>"; };
 		91CEC8CF1AF6998B005C596B /* PoliticianInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoliticianInteractor.m; sourceTree = "<group>"; };
 		91CEC8D11AF6A0AC005C596B /* SpinningWheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpinningWheelView.h; sourceTree = "<group>"; };
@@ -444,8 +444,8 @@
 		911EB0F41B0B0E6D00A7FF57 /* Politician */ = {
 			isa = PBXGroup;
 			children = (
-				91CEC8CA1AF69850005C596B /* Politician.h */,
-				91CEC8CB1AF69850005C596B /* Politician.m */,
+				91CEC8CA1AF69850005C596B /* FederalPolitician.h */,
+				91CEC8CB1AF69850005C596B /* FederalPolitician.m */,
 			);
 			name = Politician;
 			sourceTree = "<group>";
@@ -806,7 +806,7 @@
 				9106562D1AF3FAA500D9BFC8 /* AFNRequestManager.m in Sources */,
 				915C60981B0AAA420021C3A0 /* DonorViewController.m in Sources */,
 				91E34C631B0AE96500628032 /* ExternalAppManager.m in Sources */,
-				91CEC8CC1AF69850005C596B /* Politician.m in Sources */,
+				91CEC8CC1AF69850005C596B /* FederalPolitician.m in Sources */,
 				911EB0E51B0B01A200A7FF57 /* BillProvider.m in Sources */,
 				9167703E1B12CF9300C3D34E /* HeaderTableViewCell.m in Sources */,
 				911EB0EC1B0B0CFE00A7FF57 /* DonorInteractor.m in Sources */,

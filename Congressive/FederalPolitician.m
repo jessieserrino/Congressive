@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Jessie Serrino. All rights reserved.
 //
 
-#import "Politician.h"
+#import "FederalPolitician.h"
 
-@implementation Politician
+@implementation FederalPolitician
 
 - (instancetype)initWithDictionary: (NSDictionary *) dictionary
 {
@@ -45,7 +45,7 @@
 
 + (instancetype) fakePolitician
 {
-    Politician * p = [[Politician alloc] init];
+    FederalPolitician * p = [[FederalPolitician alloc] init];
     p.firstName = @"Elizabeth";
     p.lastName = @"Fairfield";
     p.phoneNumber = @"847-309-9966";

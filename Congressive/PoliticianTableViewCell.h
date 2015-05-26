@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Politician.h"
+#import "FederalPolitician.h"
 
 @interface PoliticianTableViewCell : UITableViewCell
 
@@ -16,7 +16,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *politicianLocaleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *politicianPartyLabel;
 
-@property (strong, nonatomic) Politician *politician;
+@property (strong, nonatomic) FederalPolitician *politician;
 //@property (strong, nonatomic) NSURL *politicianWebsite;
 //@property (strong, nonatomic) NSString *politicianPhoneNumber;
 @property (strong, nonatomic) IBOutlet UILabel *politicianCongressLabel;

@@ -11,7 +11,7 @@
 
 @interface InfoViewController : UITableViewController <PoliticianDetailProtocol>
 
-@property (nonatomic, strong) Politician *politician;
+@property (nonatomic, weak) FederalPolitician *politician;
 
 @end
 

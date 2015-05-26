@@ -11,7 +11,7 @@
 
 @interface BiographyTableViewCell()
 
-@property (nonatomic, strong) Politician *politician;
+@property (nonatomic, strong) FederalPolitician *politician;
 
 
 @property (nonatomic, weak) IBOutlet UIView *paperView;
@@ -32,7 +32,7 @@
     // Configure the view for the selected state
 }
 
-- (void)prepareWithPolitician:(Politician *)politician
+- (void)prepareWithPolitician:(FederalPolitician *)politician
 {
     _politician = politician;
     

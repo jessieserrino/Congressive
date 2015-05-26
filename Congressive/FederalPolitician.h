@@ -15,7 +15,7 @@ typedef enum : NSUInteger {
     HouseOfRepresentatives,
 } CongressChamber;
 
-@interface Politician : NSObject <NSCoding> //MTLModel <MTLJSONSerializing>
+@interface FederalPolitician : NSObject <NSCoding> //MTLModel <MTLJSONSerializing>
 
 // Basic
 @property (nonatomic, strong)         NSString *firstName;

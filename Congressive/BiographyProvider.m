@@ -37,7 +37,7 @@ static NSString * const kBaseDomain = @"http://bioguide.congress.gov/scripts/bio
 
 
 // Gross code, will change.
-- (void)loadBiographyWithPolitician: (Politician *) politician completion:(SuccessBlock)successBlock error:(ErrorBlock)errorBlock {
+- (void)loadBiographyWithPolitician: (FederalPolitician *) politician completion:(SuccessBlock)successBlock error:(ErrorBlock)errorBlock {
     
     
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat: kBaseDomain, politician.bioguide]];

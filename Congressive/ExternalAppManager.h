@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Politician.h"
+#import "FederalPolitician.h"
 
 @interface ExternalAppManager : NSObject
 
@@ -22,6 +22,6 @@ typedef enum : NSUInteger {
 } ExternalApplication;
 
 
-+ (void) open: (ExternalApplication) application WithPolitician: (Politician *) politician;
++ (void) open: (ExternalApplication) application WithPolitician: (FederalPolitician *) politician;
 
 @end

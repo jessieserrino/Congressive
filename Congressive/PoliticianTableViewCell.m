@@ -30,7 +30,7 @@
     [ExternalAppManager open:WebBrowser WithPolitician:self.politician];
 }
 
-- (void)setPolitician:(Politician *)politician
+- (void)setPolitician:(FederalPolitician *)politician
 {
     self.politicianNameLabel.text = politician.fullName;
     self.politicianLocaleLabel.text = politician.USState;

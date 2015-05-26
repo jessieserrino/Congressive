@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Politician.h"
+#import "FederalPolitician.h"
 #import "PoliticianDetail.h"
 
 @interface BillTableViewController : UITableViewController <PoliticianDetailProtocol, UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) Politician *politician;
+@property (nonatomic, weak) FederalPolitician *politician;
 @property (nonatomic, strong) NSArray *bills;
 
 @end

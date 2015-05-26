@@ -34,7 +34,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.map.delegate = self;
     
     self.searchBar.delegate = self;
@@ -146,6 +145,14 @@
                  }];
 }
 
+
+- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    if([searchText isEqualToString:@""])
+    {
+        [searchBar resignFirstResponder];
+    }
+}
 
 - (void) setMapCenter: (CLLocationCoordinate2D) coordinate
 {

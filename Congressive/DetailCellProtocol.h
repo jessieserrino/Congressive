@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Politician.h"
+#import "FederalPolitician.h"
 #import "ExternalAppManager.h"
 
 @protocol DetailCellProtocol <NSObject>
 
-- (void) prepareWithPolitician: (Politician *) politician;
+- (void) prepareWithPolitician: (FederalPolitician *) politician;
 
 @end
 

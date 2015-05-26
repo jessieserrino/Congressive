@@ -24,7 +24,7 @@ static NSString * const MapsPrefix = @"http://maps.apple.com/?q=%@";
 
 @implementation ExternalAppManager
 
-+ (void) open: (ExternalApplication) application WithPolitician: (Politician *)politician
++ (void) open: (ExternalApplication) application WithPolitician: (FederalPolitician *)politician
 {
     switch (application) {
         case Phone:

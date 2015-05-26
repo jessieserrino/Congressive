@@ -9,12 +9,16 @@
 #import "PoliticianTableViewController.h"
 #import "PoliticianInteractor.h"
 #import "PoliticianTableViewCell.h"
-#import "Politician.h"
+#import "FederalPolitician.h"
 #import "TabBarViewController.h"
+
+static NSUInteger const FederalSection;
+static NSUInteger const StateSection;
+
 
 @interface PoliticianTableViewController ()
     @property (nonatomic, weak) NSArray *politicians;
-@property (nonatomic, weak) Politician *selectedPolitician;
+@property (nonatomic, weak) FederalPolitician *selectedPolitician;
 @end
 
 @implementation PoliticianTableViewController
@@ -53,14 +57,22 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return self.politicians.count;
+    if(section == FederalSection)
+        return self.politicians.count;
+    return 0;
 }
 
+- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if(section == FederalSection)
+        return @"Federal";
+    return @"State";
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PoliticianTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([PoliticianTableViewCell class]) forIndexPath:indexPath];
     
-    Politician *p = self.politicians[indexPath.item];
+    FederalPolitician *p = self.politicians[indexPath.item];
     
     cell.politician = p;
 

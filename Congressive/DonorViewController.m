@@ -47,7 +47,7 @@
 {
     DonorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DonorTableViewCell" forIndexPath:indexPath];
     cell.donor = self.donors[indexPath.item];
-    cell.donorName.text = [NSString stringWithFormat:@"%li. %@", (indexPath.item + 1), cell.donorName.text];
+    cell.donorName.text = [NSString stringWithFormat:@"%ld . %@", (long)(indexPath.item + 1), cell.donorName.text];
     return cell;
 }
 

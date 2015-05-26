@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 Jessie Serrino. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-#import "Politician.h"
+#import "FederalPolitician.h"
 #import "AFNRequestManager.h"
 
 @interface BiographyProvider : AFNRequestManager
 + (instancetype) sharedProvider;
-- (void)loadBiographyWithPolitician: (Politician *) politician completion:(SuccessBlock)successBlock error:(ErrorBlock)errorBlock;
+- (void)loadBiographyWithPolitician: (FederalPolitician *) politician completion:(SuccessBlock)successBlock error:(ErrorBlock)errorBlock;
 @end

@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Politician.h"
+#import "FederalPolitician.h"
 
 @protocol PoliticianDetailProtocol <NSObject>
 
-@property (nonatomic, weak) Politician *politician;
+@property (nonatomic, weak) FederalPolitician *politician;
 
 - (void) requestDataForViewController;
 

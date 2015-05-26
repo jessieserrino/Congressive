@@ -16,7 +16,7 @@ static NSUInteger const ImageNameIndex = 2;
 
 
 @interface ContactTableViewCell() <UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic, strong) Politician *politician;
+@property (nonatomic, strong) FederalPolitician *politician;
 
 @property (nonatomic, weak) IBOutlet UITableView *buttonTableView;
 @property (nonatomic, weak) IBOutlet UIView *paperView;
@@ -33,7 +33,7 @@ static NSUInteger const ImageNameIndex = 2;
     [self setupButtonTable];
 }
 
-- (void)prepareWithPolitician:(Politician *)politician
+- (void)prepareWithPolitician:(FederalPolitician *)politician
 {
     _politician = politician;
     [self configureVisuals];

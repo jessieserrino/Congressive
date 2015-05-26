@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNRequestManager.h"
-#import "Politician.h"
+#import "FederalPolitician.h"
 
 @interface BillProvider : AFNRequestManager
 + (instancetype) sharedProvider;
-- (void)loadCosponsoredBillsWithPolitician: (Politician *) politician completion:(SuccessBlock)successBlock error:(ErrorBlock)errorBlock;
+- (void)loadCosponsoredBillsWithPolitician: (FederalPolitician *) politician completion:(SuccessBlock)successBlock error:(ErrorBlock)errorBlock;
 @end

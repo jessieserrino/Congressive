@@ -7,7 +7,7 @@
 //
 
 #import "BillProvider.h"
-#import "Politician.h"
+#import "FederalPolitician.h"
 
 @implementation BillProvider
 
@@ -34,7 +34,7 @@
     return sharedProvider;
 }
 
-- (void)loadCosponsoredBillsWithPolitician: (Politician *) politician completion:(SuccessBlock)successBlock error:(ErrorBlock)errorBlock
+- (void)loadCosponsoredBillsWithPolitician: (FederalPolitician *) politician completion:(SuccessBlock)successBlock error:(ErrorBlock)errorBlock
 {
     
     [self GET:@"bills"
@@ -44,7 +44,7 @@
    completion:successBlock
         error:errorBlock];
 }
-- (void) loadSponsoredBillsWithPolitician: (Politician *) politician completion: (SuccessBlock) successBlock error: (ErrorBlock) errorBlock
+- (void) loadSponsoredBillsWithPolitician: (FederalPolitician *) politician completion: (SuccessBlock) successBlock error: (ErrorBlock) errorBlock
 {
     [self GET:@"bills"
    parameters:[[NSDictionary alloc]

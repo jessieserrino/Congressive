@@ -14,6 +14,6 @@
 @property (nonatomic) CGFloat specialHeight;
 
 
-- (void)prepareWithPolitician:(Politician *)politician;
+- (void)prepareWithPolitician:(FederalPolitician *)politician;
 
 @end

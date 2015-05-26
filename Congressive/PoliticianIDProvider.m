@@ -32,7 +32,7 @@
     return sharedProvider;
 }
 
-- (void) IDforPolitician: (Politician *) politician withCompletion: (SuccessBlock) successBlock andError: (ErrorBlock) errorBlock
+- (void) IDforPolitician: (FederalPolitician *) politician withCompletion: (SuccessBlock) successBlock andError: (ErrorBlock) errorBlock
 {
     [self GET:@"id_lookup.json"
    parameters:[[NSDictionary alloc]

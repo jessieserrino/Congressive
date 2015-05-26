@@ -9,7 +9,7 @@
 #import "HeaderTableViewCell.h"
 
 @interface HeaderTableViewCell ()
-@property (nonatomic, strong) Politician *politician;
+@property (nonatomic, strong) FederalPolitician *politician;
 
 /* Politician Information */
 @property (nonatomic, weak) IBOutlet UILabel *politicianLabel;
@@ -41,7 +41,7 @@
     // Configure the view for the selected state
 }
 
-- (void) prepareWithPolitician: (Politician *) politician
+- (void) prepareWithPolitician: (FederalPolitician *) politician
 {
     _politician = politician;
     
